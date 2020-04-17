@@ -50,6 +50,7 @@ import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.RichInputMethodSubtype;
 import com.android.inputmethod.latin.common.Constants;
 import com.android.inputmethod.latin.utils.ResourceUtils;
+import com.zeerooo.Tinter;
 
 /**
  * View class to implement Emoji palettes.
@@ -153,7 +154,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
                 R.layout.emoji_keyboard_tab_icon, null);
         // TODO: Replace background color with its own setting rather than using the
         //       category page indicator background as a workaround.
-        iconView.setBackgroundColor(mCategoryPageIndicatorBackground);
+       // iconView.setBackgroundColor(mCategoryPageIndicatorBackground);
         iconView.setImageResource(mEmojiCategory.getCategoryTabIcon(categoryId));
         iconView.setContentDescription(mEmojiCategory.getAccessibilityDescription(categoryId));
         tspec.setIndicator(iconView);
@@ -163,6 +164,7 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
     @Override
     protected void onFinishInflate() {
         mTabHost = (TabHost)findViewById(R.id.emoji_category_tabhost);
+        findViewById(R.id.top_bar_root_view).setBackgroundColor(Tinter.colorAccent);
         mTabHost.setup();
         for (final EmojiCategory.CategoryProperties properties
                 : mEmojiCategory.getShownCategories()) {
@@ -201,7 +203,8 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
 
         // deleteKey depends only on OnTouchListener.
         mDeleteKey = (ImageButton)findViewById(R.id.emoji_keyboard_delete);
-        mDeleteKey.setBackgroundResource(mFunctionalKeyBackgroundId);
+        mDeleteKey.setBackgroundColor(Color.TRANSPARENT);
+        //mDeleteKey.setBackgroundResource(mFunctionalKeyBackgroundId);
         mDeleteKey.setTag(Constants.CODE_DELETE);
         mDeleteKey.setOnTouchListener(mDeleteKeyOnTouchListener);
 
@@ -213,12 +216,10 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         // The text on alphabet keys are set at
         // {@link #startEmojiPalettes(String,int,float,Typeface)}.
         mAlphabetKeyLeft = (TextView)findViewById(R.id.emoji_keyboard_alphabet_left);
-        mAlphabetKeyLeft.setBackgroundResource(mFunctionalKeyBackgroundId);
         mAlphabetKeyLeft.setTag(Constants.CODE_ALPHA_FROM_EMOJI);
         mAlphabetKeyLeft.setOnTouchListener(this);
         mAlphabetKeyLeft.setOnClickListener(this);
         mAlphabetKeyRight = (TextView)findViewById(R.id.emoji_keyboard_alphabet_right);
-        mAlphabetKeyRight.setBackgroundResource(mFunctionalKeyBackgroundId);
         mAlphabetKeyRight.setTag(Constants.CODE_ALPHA_FROM_EMOJI);
         mAlphabetKeyRight.setOnTouchListener(this);
         mAlphabetKeyRight.setOnClickListener(this);
@@ -229,6 +230,8 @@ public final class EmojiPalettesView extends LinearLayout implements OnTabChange
         mSpacebar.setOnClickListener(this);
         mEmojiLayoutParams.setKeyProperties(mSpacebar);
         mSpacebarIcon = findViewById(R.id.emoji_keyboard_space_icon);
+
+        setBackgroundColor(Tinter.colorAccentDark);
     }
 
     @Override

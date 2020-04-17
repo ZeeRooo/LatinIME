@@ -23,6 +23,7 @@ import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_MICROP
 import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_MICROPHONE_COMPAT;
 
 import android.Manifest.permission;
+import android.app.Activity;
 import android.app.ActivityOptions;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -31,6 +32,8 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -46,6 +49,7 @@ import android.util.Log;
 import android.util.PrintWriterPrinter;
 import android.util.Printer;
 import android.util.SparseArray;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -55,6 +59,8 @@ import android.view.WindowManager;
 import android.view.inputmethod.CompletionInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodSubtype;
+
+import androidx.core.content.ContextCompat;
 
 import com.android.inputmethod.accessibility.AccessibilityUtils;
 import com.android.inputmethod.annotations.UsedForTesting;
@@ -100,6 +106,7 @@ import com.android.inputmethod.latin.utils.StatsUtils;
 import com.android.inputmethod.latin.utils.StatsUtilsManager;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 import com.android.inputmethod.latin.utils.ViewLayoutUtils;
+import com.zeerooo.Tinter;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -204,9 +211,11 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
 
     private GestureConsumer mGestureConsumer = GestureConsumer.NULL_GESTURE_CONSUMER;
 
+    private Tinter tinter;
+
     public final UIHandler mHandler = new UIHandler(this);
 
-    public static final class UIHandler extends LeakGuardHandlerWrapper<LatinIME> {
+    public final class UIHandler extends LeakGuardHandlerWrapper<LatinIME> {
         private static final int MSG_UPDATE_SHIFT_STATE = 0;
         private static final int MSG_PENDING_IMS_CALLBACK = 1;
         private static final int MSG_UPDATE_SUGGESTION_STRIP = 2;
@@ -494,6 +503,8 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
                 if (latinIme != null) {
                     executePendingImsCallback(latinIme, editorInfo, restarting);
                     latinIme.onStartInputInternal(editorInfo, restarting);
+
+                    tinter.doMagic(editorInfo);
                 }
             }
         }
@@ -607,6 +618,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         mDisplayContext = createDisplayContext(wm.getDefaultDisplay());
         mCurDisplayId = wm.getDefaultDisplay().getDisplayId();
         KeyboardSwitcher.init(this);
+        tinter = new Tinter(this);
         super.onCreate();
 
         mHandler.onCreate();
@@ -813,6 +825,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     @Override
     public View onCreateInputView() {
         StatsUtils.onCreateInputView();
+        System.out.println("++++++++++++++");
         return mKeyboardSwitcher.onCreateInputView(mDisplayContext,
                 mIsHardwareAcceleratedDrawingEnabled);
     }
@@ -1242,6 +1255,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
             final int touchBottom = inputHeight;
             outInsets.touchableInsets = InputMethodService.Insets.TOUCHABLE_INSETS_REGION;
             outInsets.touchableRegion.set(touchLeft, touchTop, touchRight, touchBottom);
+            mSuggestionStripView.setBackgroundColor(Tinter.colorAccent);
         }
         outInsets.contentTopInsets = visibleTopY;
         outInsets.visibleTopInsets = visibleTopY;
