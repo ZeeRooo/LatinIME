@@ -31,7 +31,6 @@ import com.android.inputmethod.annotations.UsedForTesting;
 import com.android.inputmethod.keyboard.Key;
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.keyboard.KeyboardId;
-import com.android.inputmethod.keyboard.KeyboardTheme;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.common.Constants;
 import com.android.inputmethod.latin.common.StringUtils;
@@ -648,9 +647,6 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             final boolean keyboardLayoutSetElementMatched = matchTypedValue(caseAttr,
                     R.styleable.Keyboard_Case_keyboardLayoutSetElement, id.mElementId,
                     KeyboardId.elementIdToName(id.mElementId));
-            final boolean keyboardThemeMacthed = matchTypedValue(caseAttr,
-                    R.styleable.Keyboard_Case_keyboardTheme, mParams.mThemeId,
-                    KeyboardTheme.getKeyboardThemeName(mParams.mThemeId));
             final boolean modeMatched = matchTypedValue(caseAttr,
                     R.styleable.Keyboard_Case_mode, id.mMode, KeyboardId.modeName(id.mMode));
             final boolean navigateNextMatched = matchBoolean(caseAttr,
@@ -679,7 +675,7 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
             final boolean splitLayoutMatched = matchBoolean(caseAttr,
                     R.styleable.Keyboard_Case_isSplitLayout, id.mIsSplitLayout);
             final boolean selected = keyboardLayoutSetMatched && keyboardLayoutSetElementMatched
-                    && keyboardThemeMacthed && modeMatched && navigateNextMatched
+                    && modeMatched && navigateNextMatched
                     && navigatePreviousMatched && passwordInputMatched && clobberSettingsKeyMatched
                     && hasShortcutKeyMatched  && languageSwitchKeyEnabledMatched
                     && isMultiLineMatched && imeActionMatched && isIconDefinedMatched

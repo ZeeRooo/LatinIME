@@ -18,6 +18,7 @@ package com.android.inputmethod.keyboard;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Build;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -65,7 +66,6 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
     // TODO: The following {@link KeyboardTextsSet} should be in {@link KeyboardLayoutSet}.
     private final KeyboardTextsSet mKeyboardTextsSet = new KeyboardTextsSet();
 
-    private KeyboardTheme mKeyboardTheme;
     private Context mThemeContext;
 
     private static final KeyboardSwitcher sInstance = new KeyboardSwitcher();
@@ -90,22 +90,9 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
                 InputMethodServiceCompatUtils.enableHardwareAcceleration(mLatinIME);
     }
 
-    public void updateKeyboardTheme(@NonNull Context displayContext) {
-        final boolean themeUpdated = updateKeyboardThemeAndContextThemeWrapper(
-                displayContext, KeyboardTheme.getKeyboardTheme(displayContext /* context */));
-        if (themeUpdated && mKeyboardView != null) {
-            mLatinIME.setInputView(
-                    onCreateInputView(displayContext, mIsHardwareAcceleratedDrawingEnabled));
-        }
-    }
-
-    private boolean updateKeyboardThemeAndContextThemeWrapper(final Context context,
-            final KeyboardTheme keyboardTheme) {
-        if (mThemeContext == null || !keyboardTheme.equals(mKeyboardTheme)
-                || !mThemeContext.getResources().equals(context.getResources())) {
-            mKeyboardTheme = keyboardTheme;
-            mThemeContext = new ContextThemeWrapper(context, keyboardTheme.mStyleId);
-            KeyboardLayoutSet.onKeyboardThemeChanged();
+    private boolean updateKeyboardThemeAndContextThemeWrapper(final Context context) {
+        if (mThemeContext == null) {
+            mThemeContext = new ContextThemeWrapper(context, R.style.KeyboardTheme_LXX_Dark);
             return true;
         }
         return false;
@@ -464,8 +451,7 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
             mKeyboardView.closing();
         }
 
-        updateKeyboardThemeAndContextThemeWrapper(
-                displayContext, KeyboardTheme.getKeyboardTheme(displayContext /* context */));
+        updateKeyboardThemeAndContextThemeWrapper(displayContext);
         mCurrentInputView = (InputView)LayoutInflater.from(mThemeContext).inflate(
                 R.layout.input_view, null);
         mMainKeyboardFrame = mCurrentInputView.findViewById(R.id.main_keyboard_frame);

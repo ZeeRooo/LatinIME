@@ -818,7 +818,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         if (mCurDisplayId != newDisplayId) {
             mCurDisplayId = newDisplayId;
             mDisplayContext = createDisplayContext(wm.getDefaultDisplay());
-            mKeyboardSwitcher.updateKeyboardTheme(mDisplayContext);
+           // mKeyboardSwitcher.updateKeyboardTheme(mDisplayContext);
         }
     }
 
@@ -910,7 +910,6 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         mGestureConsumer = GestureConsumer.NULL_GESTURE_CONSUMER;
         mRichImm.refreshSubtypeCaches();
         final KeyboardSwitcher switcher = mKeyboardSwitcher;
-        switcher.updateKeyboardTheme(mDisplayContext);
         final MainKeyboardView mainKeyboardView = switcher.getMainKeyboardView();
         // If we are starting input in a different text field from before, we'll have to reload
         // settings, so currentSettingsValues can't be final.
