@@ -32,6 +32,7 @@ import com.android.inputmethod.latin.RichInputMethodManager;
 import com.android.inputmethod.latin.utils.AsyncResultHolder;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 import com.android.inputmethod.latin.utils.TargetPackageInfoGetterTask;
+import com.zeerooo.KeyEffects;
 
 import java.util.Arrays;
 import java.util.Locale;
@@ -222,6 +223,8 @@ public class SettingsValues {
             new TargetPackageInfoGetterTask(context, mAppWorkarounds)
                     .execute(mInputAttributes.mTargetApplicationPackageName);
         }
+
+        KeyEffects.keyEffectMode = Byte.valueOf(prefs.getString("pref_key_effect", "2"));
     }
 
     public boolean isMetricsLoggingEnabled() {

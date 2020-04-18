@@ -20,9 +20,6 @@ android {
     // Required if using classes in android.test.base
     useLibrary 'android.test.base'
 
-    // Required if using classes in android.test.mock
-    useLibrary 'android.test.mock'
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
@@ -47,6 +44,7 @@ android {
             minifyEnabled false
         }
         release {
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.flags'
         }
     }
@@ -85,6 +83,16 @@ android {
             path 'native/jni/Android.mk'
         }
     }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    project.ext.versionCodes = ['armeabi-v7a': 2, 'arm64-v8a': 3]
 }
 
 repositories {

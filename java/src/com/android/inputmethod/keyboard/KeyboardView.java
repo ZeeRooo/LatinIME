@@ -32,16 +32,18 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.keyboard.internal.KeyDrawParams;
 import com.android.inputmethod.keyboard.internal.KeyVisualAttributes;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.common.Constants;
 import com.android.inputmethod.latin.utils.TypefaceUtils;
+import com.zeerooo.KeyEffects;
 import com.zeerooo.Tinter;
 
 import java.util.HashSet;
-
-import androidx.annotation.NonNull;import androidx.annotation.Nullable;
 
 
 /**
@@ -132,6 +134,10 @@ public class KeyboardView extends View {
     private final Paint mPaint = new Paint();
     private final Paint.FontMetrics mFontMetrics = new Paint.FontMetrics();
 
+    private KeyEffects keyEffects = new KeyEffects();
+
+    private boolean draw = true;
+
     public KeyboardView(final Context context, final AttributeSet attrs) {
         this(context, attrs, R.attr.keyboardViewStyle);
     }
@@ -202,6 +208,10 @@ public class KeyboardView extends View {
         mKeyDrawParams.updateParams(keyHeight, keyboard.mKeyVisualAttributes);
         invalidateAllKeys();
         requestLayout();
+
+        keyEffects.initialize(keyboard, mPaint);
+
+        draw = true;
     }
 
     /**
@@ -243,22 +253,26 @@ public class KeyboardView extends View {
 
     @Override
     protected void onDraw(final Canvas canvas) {
-        super.onDraw(canvas);
-        if (canvas.isHardwareAccelerated()) {
-            onDrawKeyboard(canvas);
-            return;
-        }
+        super.onDraw(keyEffects.draw(canvas));
 
-        final boolean bufferNeedsUpdates = mInvalidateAllKeys || !mInvalidatedKeys.isEmpty();
-        if (bufferNeedsUpdates || mOffscreenBuffer == null) {
-            if (maybeAllocateOffscreenBuffer()) {
-                mInvalidateAllKeys = true;
-                // TODO: Stop using the offscreen canvas even when in software rendering
-                mOffscreenCanvas.setBitmap(mOffscreenBuffer);
+        if (draw) {
+            if (canvas.isHardwareAccelerated()) {
+                onDrawKeyboard(canvas);
+                return;
             }
-            onDrawKeyboard(mOffscreenCanvas);
+
+            final boolean bufferNeedsUpdates = mInvalidateAllKeys || !mInvalidatedKeys.isEmpty();
+            if (bufferNeedsUpdates || mOffscreenBuffer == null) {
+                if (maybeAllocateOffscreenBuffer()) {
+                    mInvalidateAllKeys = true;
+                    // TODO: Stop using the offscreen canvas even when in software rendering
+                    mOffscreenCanvas.setBitmap(mOffscreenBuffer);
+                }
+                onDrawKeyboard(mOffscreenCanvas);
+            }
+            canvas.drawBitmap(mOffscreenBuffer, 0.0f, 0.0f, null);
+            draw = false;
         }
-        canvas.drawBitmap(mOffscreenBuffer, 0.0f, 0.0f, null);
     }
 
     private boolean maybeAllocateOffscreenBuffer() {
@@ -299,7 +313,7 @@ public class KeyboardView extends View {
         final boolean isHardwareAccelerated = canvas.isHardwareAccelerated();
         // TODO: Confirm if it's really required to draw all keys when hardware acceleration is on.
         if (drawAllKeys || isHardwareAccelerated) {
-            if (!isHardwareAccelerated && background != null) {
+            if (!isHardwareAccelerated) {
                 // Need to draw keyboard background on {@link #mOffscreenBuffer}.
                 canvas.drawColor(Color.BLACK, PorterDuff.Mode.CLEAR);
                 background.draw(canvas);
@@ -313,17 +327,15 @@ public class KeyboardView extends View {
                 if (!keyboard.hasKey(key)) {
                     continue;
                 }
-                if (background != null) {
-                    // Need to redraw key's background on {@link #mOffscreenBuffer}.
-                    final int x = key.getX() + getPaddingLeft();
-                    final int y = key.getY() + getPaddingTop();
-                    mClipRect.set(x, y, x + key.getWidth(), y + key.getHeight());
-                    canvas.save();
-                    canvas.clipRect(mClipRect);
-                    canvas.drawColor(Color.BLACK, PorterDuff.Mode.CLEAR);
-                    background.draw(canvas);
-                    canvas.restore();
-                }
+                // Need to redraw key's background on {@link #mOffscreenBuffer}.
+                final int x = key.getX() + getPaddingLeft();
+                final int y = key.getY() + getPaddingTop();
+                mClipRect.set(x, y, x + key.getWidth(), y + key.getHeight());
+                canvas.save();
+                canvas.clipRect(mClipRect);
+                canvas.drawColor(Color.BLACK, PorterDuff.Mode.CLEAR);
+                background.draw(canvas);
+                canvas.restore();
                 onDrawKey(key, canvas, paint);
             }
         }
@@ -344,9 +356,7 @@ public class KeyboardView extends View {
 
         if (!key.isSpacer()) {
             final Drawable background = key.selectBackgroundDrawable(mKeyBackground, mSpacebarBackground);
-            if (background != null) {
-                onDrawKeyBackground(key, canvas, background);
-            }
+            onDrawKeyBackground(key, canvas, background);
         }
         onDrawKeyTopVisuals(key, canvas, paint, params);
 
@@ -440,7 +450,6 @@ public class KeyboardView extends View {
                 }
             } else {
                 // Make label invisible
-                paint.setColor(Color.RED);
                 paint.clearShadowLayer();
             }
             blendAlpha(paint, params.mAnimAlpha);

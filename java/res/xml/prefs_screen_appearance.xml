@@ -27,4 +27,11 @@
         android:title="@string/enable_split_keyboard"
         android:persistent="true"
         android:defaultValue="false" />
+    <ListPreference
+        android:key="pref_key_effect"
+        android:title="Key effect"
+        android:summary="Current: %s"
+        android:defaultValue="2"
+        android:entries="@array/pref_key_effect_entries"
+        android:entryValues="@array/pref_key_effect_values" />
 </PreferenceScreen>

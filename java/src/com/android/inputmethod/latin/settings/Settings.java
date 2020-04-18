@@ -254,6 +254,7 @@ public final class Settings implements SharedPreferences.OnSharedPreferenceChang
 
     public static int readKeyPreviewPopupDismissDelay(final SharedPreferences prefs,
             final Resources res) {
+        System.out.println("readKeyPreviewPopupDismissDelay");
         return Integer.parseInt(prefs.getString(PREF_KEY_PREVIEW_POPUP_DISMISS_DELAY,
                 Integer.toString(res.getInteger(
                         R.integer.config_key_preview_linger_timeout))));

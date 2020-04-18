@@ -155,6 +155,7 @@ public final class KeyboardSwitcher implements KeyboardState.SwitchActions {
                 currentSettingsValues.mKeyPreviewDismissEndYScale,
                 currentSettingsValues.mKeyPreviewDismissDuration);
         keyboardView.updateShortcutKey(mRichImm.isShortcutImeReady());
+
         final boolean subtypeChanged = (oldKeyboard == null)
                 || !newKeyboard.mId.mSubtype.equals(oldKeyboard.mId.mSubtype);
         final int languageOnSpacebarFormatType = LanguageOnSpacebarUtils
