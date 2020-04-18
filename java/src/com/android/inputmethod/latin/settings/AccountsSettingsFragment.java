@@ -16,9 +16,6 @@
 
 package com.android.inputmethod.latin.settings;
 
-import static com.android.inputmethod.latin.settings.LocalSettingsConstants.PREF_ACCOUNT_NAME;
-import static com.android.inputmethod.latin.settings.LocalSettingsConstants.PREF_ENABLE_CLOUD_SYNC;
-
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -47,6 +44,9 @@ import com.android.inputmethod.latin.utils.ManagedProfileUtils;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.annotation.Nullable;
+
+import static com.android.inputmethod.latin.settings.LocalSettingsConstants.PREF_ACCOUNT_NAME;
+import static com.android.inputmethod.latin.settings.LocalSettingsConstants.PREF_ENABLE_CLOUD_SYNC;
 
 /**
  * "Accounts & Privacy" settings sub screen.

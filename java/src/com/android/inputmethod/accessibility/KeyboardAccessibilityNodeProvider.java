@@ -18,15 +18,16 @@ package com.android.inputmethod.accessibility;
 
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.accessibility.AccessibilityEvent;
+import android.view.inputmethod.EditorInfo;
+
 import androidx.core.view.ViewCompat;
 import androidx.core.view.accessibility.AccessibilityEventCompat;
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
 import androidx.core.view.accessibility.AccessibilityNodeProviderCompat;
 import androidx.core.view.accessibility.AccessibilityRecordCompat;
-import android.util.Log;
-import android.view.View;
-import android.view.accessibility.AccessibilityEvent;
-import android.view.inputmethod.EditorInfo;
 
 import com.android.inputmethod.keyboard.Key;
 import com.android.inputmethod.keyboard.Keyboard;

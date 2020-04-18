@@ -20,9 +20,10 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
-import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.core.view.ViewCompat;
 
 import com.android.inputmethod.latin.R;
 

@@ -17,9 +17,10 @@
 package com.android.inputmethod.keyboard.emoji;
 
 import android.content.res.Resources;
-import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.utils.ResourceUtils;

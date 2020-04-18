@@ -16,8 +16,6 @@
 
 package com.android.inputmethod.latin;
 
-import static com.android.inputmethod.latin.common.Constants.Subtype.KEYBOARD_MODE;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.inputmethodservice.InputMethodService;
@@ -48,6 +46,8 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import static com.android.inputmethod.latin.common.Constants.Subtype.KEYBOARD_MODE;
 
 /**
  * Enrichment class for InputMethodManager to simplify interaction and add functionality.

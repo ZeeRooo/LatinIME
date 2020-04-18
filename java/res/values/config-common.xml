@@ -50,8 +50,6 @@
     <integer name="config_longpress_timeout_step">10</integer>
     <integer name="config_accessibility_long_press_key_timeout">3000</integer>
     <integer name="config_max_more_keys_column">5</integer>
-    <integer name="config_more_keys_keyboard_fadein_anim_time">0</integer>
-    <integer name="config_more_keys_keyboard_fadeout_anim_time">100</integer>
 
     <!-- Long pressing shift will invoke caps-lock if > 0, never invoke caps-lock if == 0 -->
     <integer name="config_longpress_shift_lock_timeout">1200</integer>
@@ -137,11 +135,9 @@
     <dimen name="config_emoji_category_page_id_height">2dp</dimen>
 
     <!-- Inset used in Accessibility mode to avoid accidental key presses when a finger slides off the screen. -->
-    <dimen name="config_accessibility_edge_slop">8dp</dimen>
 
     <integer name="config_user_dictionary_max_word_length">48</integer>
 
     <!-- Personalization configuration -->
     <!-- -1 means periocical wipe of the personalization dict is disabled. -->
-    <integer name="config_personalization_dict_wipe_interval_in_days">-1</integer>
 </resources>

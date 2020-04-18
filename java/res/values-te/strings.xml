@@ -18,8 +18,7 @@
 */
  -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="english_ime_input_options" msgid="3909945612939668554">"ఇన్‌పుట్ ఎంపికలు"</string>
     <string name="use_contacts_for_spellchecking_option_title" msgid="5374120998125353898">"పరిచయ పేర్లను వెతకండి"</string>
     <string name="use_contacts_for_spellchecking_option_summary" msgid="8754413382543307713">"స్పెల్ చెకర్ మీ పరిచయ జాబితా నుండి నమోదులను ఉపయోగిస్తుంది"</string>
@@ -32,7 +31,6 @@
     <string name="settings_screen_gesture" msgid="8826372746901183556">"సంజ్ఞ టైపింగ్"</string>
     <string name="settings_screen_correction" msgid="1616818407747682955">"వచన సవరణ"</string>
     <string name="settings_screen_advanced" msgid="7472408607625972994">"అధునాతనం"</string>
-    <string name="settings_screen_theme" msgid="2137262503543943871">"థీమ్"</string>
     <string name="enable_split_keyboard" msgid="4177264923999493614">"విభజన కీబోర్డ్‌ను ప్రారంభించు"</string>
     <string name="cloud_sync_title" msgid="8579271074443847055">"Google కీబోర్డ్ సమకాలీకరణ"</string>
     <string name="cloud_sync_summary" msgid="7684887161145650857">"సమకాలీకరణ ఆన్ చేయబడింది"</string>
@@ -46,10 +44,6 @@
     <string name="cloud_sync_opt_in_text" msgid="9176039655776298248">"మీ వ్యక్తిగత నిఘంటువు Google సర్వర్‌లకు సమకాలీకరించబడుతుంది మరియు బ్యాకప్ చేయబడుతుంది. మా ఉత్పత్తులను మెరుగుపరచడంలో సహాయకరంగా ఉండటానికి పదం తరచుదనానికి సంబంధించిన గణాంక సమాచారం సేకరించవచ్చు. మొత్తం సమాచార సేకరణ మరియు వినియోగం "<a href="https://www.google.com/policies/privacy">"Google గోప్యతా విధానం"</a>"కి లోబడి ఉంటుంది."</string>
     <string name="add_account_to_enable_sync" msgid="7836932571852055265">"దయచేసి ఈ లక్షణాన్ని ప్రారంభించడానికి ఈ పరికరానికి Google ఖాతాను జోడించండి"</string>
     <string name="cloud_sync_summary_disabled_work_profile" msgid="1381770407303129164">"వ్యాపారం కోసం Google Apps ఖాతాలు గల పరికరాల కోసం సమకాలీకరణ అందుబాటులో లేదు"</string>
-    <string name="include_other_imes_in_language_switch_list" msgid="4533689960308565519">"ఇతర ఇన్‌పుట్ పద్ధతులకు మారండి"</string>
-    <string name="include_other_imes_in_language_switch_list_summary" msgid="840637129103317635">"భాష మార్పు కీ ఇతర ఇన్‌పుట్ పద్ధతులను కూడా కవర్ చేస్తుంది"</string>
-    <string name="show_language_switch_key" msgid="5915478828318774384">"భాష మార్పు కీ"</string>
-    <string name="show_language_switch_key_summary" msgid="7343403647474265713">"బహుళ ఇన్‌పుట్ భాషలు ప్రారంభించబడినప్పుడు చూపు"</string>
     <string name="key_preview_popup_dismiss_delay" msgid="6213164897443068248">"కీ పాప్‌అప్ తీసివేత ఆలస్యం"</string>
     <string name="key_preview_popup_dismiss_no_delay" msgid="2096123151571458064">"ఆలస్యం లేదు"</string>
     <string name="key_preview_popup_dismiss_default_delay" msgid="2166964333903906734">"డిఫాల్ట్"</string>
@@ -65,17 +59,12 @@
     <string name="auto_cap_summary" msgid="7934452761022946874">"ప్రతి వాక్యంలో మొదటి అక్షరాన్ని పెద్ద అక్షరం చేయి"</string>
     <string name="edit_personal_dictionary" msgid="3996910038952940420">"వ్యక్తిగత నిఘంటువు"</string>
     <string name="configure_dictionaries_title" msgid="4238652338556902049">"ఇతర నిఘంటువులు"</string>
-    <string name="main_dictionary" msgid="4798763781818361168">"ప్రధాన నిఘంటువు"</string>
     <string name="prefs_show_suggestions" msgid="8026799663445531637">"సవరణ సూచనలను చూపు"</string>
     <string name="prefs_show_suggestions_summary" msgid="1583132279498502825">"టైప్ చేసేటప్పుడు సూచిత పదాలను ప్రదర్శించు"</string>
     <string name="prefs_block_potentially_offensive_title" msgid="5078480071057408934">"అభ్యంతరకరమైన పదాలను బ్లాక్ చేయి"</string>
     <string name="prefs_block_potentially_offensive_summary" msgid="2371835479734991364">"సంభావ్యంగా అభ్యంతరకరమైన పదాలను సూచించవద్దు"</string>
     <string name="auto_correction" msgid="7630720885194996950">"స్వీయ-సవరణ"</string>
     <string name="auto_correction_summary" msgid="5625751551134658006">"స్పేస్ బార్ మరియు విరామ చిహ్నాలు తప్పుగా టైప్ చేసిన పదాలను ఆటోమేటిక్‌గా సరి చేస్తాయి"</string>
-    <string name="auto_correction_threshold_mode_off" msgid="8470882665417944026">"ఆఫ్‌ చేయి"</string>
-    <string name="auto_correction_threshold_mode_modest" msgid="8788366690620799097">"మధ్యస్థం"</string>
-    <string name="auto_correction_threshold_mode_aggressive" msgid="7319007299148899623">"తీవ్రం"</string>
-    <string name="auto_correction_threshold_mode_very_aggressive" msgid="1853309024129480416">"చాలా తీవ్రం"</string>
     <string name="bigram_prediction" msgid="1084449187723948550">"తర్వాతి-పదం సూచనలు"</string>
     <string name="bigram_prediction_summary" msgid="3896362682751109677">"సూచనలను రూపొందించడంలో మునుపటి పదాన్ని ఉపయోగించు"</string>
     <string name="gesture_input" msgid="826951152254563827">"సంజ్ఞ టైపింగ్‌ను ప్రారంభించండి"</string>
@@ -83,18 +72,11 @@
     <string name="gesture_preview_trail" msgid="3802333369335722221">"సంజ్ఞ ట్రయిల్‌ను చూపు"</string>
     <string name="gesture_floating_preview_text" msgid="4443240334739381053">"డైనమిక్ ఫ్లోటింగ్ పరిదృశం"</string>
     <string name="gesture_floating_preview_text_summary" msgid="4472696213996203533">"సంజ్ఞలు చేసేటప్పుడు సూచిత పదాన్ని చూడండి"</string>
-    <string name="gesture_space_aware" msgid="2078291600664682496">"పదబంధం సంజ్ఞ"</string>
-    <string name="gesture_space_aware_summary" msgid="4371385818348528538">"స్పేస్ కీకి గ్లైడ్ చేయడం ద్వారా సంజ్ఞల సమయంలో అంతరాలను ఇన్‌పుట్ చేయండి"</string>
     <string name="voice_input" msgid="3583258583521397548">"వాయిస్ ఇన్‌పుట్ కీ"</string>
     <string name="voice_input_disabled_summary" msgid="6323489602945135165">"వాయిస్ ఇన్‌పుట్ పద్ధతులు ఏవీ ప్రారంభించబడలేదు. భాషలు &amp; ఇన్‌పుట్ సెట్టింగ్‌లను తనిఖీ చేయండి."</string>
-    <string name="configure_input_method" msgid="373356270290742459">"ఇన్‌పుట్ పద్ధతులను కాన్ఫిగర్ చేయండి"</string>
     <string name="language_selection_title" msgid="3666971864764478269">"భాషలు"</string>
     <string name="help_and_feedback" msgid="5328219371839879161">"సహాయం &amp; అభిప్రాయం"</string>
     <string name="select_language" msgid="5709487854987078367">"భాషలు"</string>
-    <string name="hint_add_to_dictionary" msgid="2645988432867033007">"సేవ్ చేయడానికి మళ్లీ నొక్కండి"</string>
-    <string name="hint_add_to_dictionary_without_word" msgid="6710206006427574423">"సేవ్ చేయడానికి ఇక్కడ నొక్కండి"</string>
-    <string name="has_dictionary" msgid="6071847973466625007">"నిఘంటువు అందుబాటులో ఉంది"</string>
-    <string name="keyboard_layout" msgid="8451164783510487501">"కీబోర్డ్ థీమ్"</string>
     <string name="switch_accounts" msgid="3321216593719006162">"ఖాతాలు మార్చండి"</string>
     <string name="no_accounts_selected" msgid="2073821619103904330">"ఖాతాలు ఏవీ ఎంచుకోబడలేదు"</string>
     <string name="account_selected" msgid="2846876462199625974">"ప్రస్తుతం <xliff:g id="EMAIL_ADDRESS">%1$s</xliff:g>ని ఉపయోగిస్తున్నారు"</string>
@@ -105,24 +87,12 @@
     <string name="subtype_en_GB" msgid="88170601942311355">"ఆంగ్లం (యుకె)"</string>
     <string name="subtype_en_US" msgid="6160452336634534239">"ఆంగ్లం (యుఎస్)"</string>
     <string name="subtype_es_US" msgid="5583145191430180200">"స్పానిష్ (యుఎస్)"</string>
-    <string name="subtype_hi_ZZ" msgid="8860448146262798623">"హింగ్లీష్"</string>
     <string name="subtype_sr_ZZ" msgid="9059219552986034343">"సెర్బియన్ (లాటిన్)"</string>
-    <string name="subtype_with_layout_en_GB" msgid="1931018968641592304">"ఆంగ్లం (యుకె) (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_en_US" msgid="8809311287529805422">"ఆంగ్లం (యుఎస్) (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_es_US" msgid="510930471167541338">"స్పానిష్ (యుఎస్) (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_hi_ZZ" msgid="6827402953860547044">"హింగ్లీష్ (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_sr_ZZ" msgid="2859024772719772407">"సెర్బియన్ (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
     <string name="subtype_generic_traditional" msgid="8584594350973800586">"<xliff:g id="LANGUAGE_NAME">%s</xliff:g> (సాంప్రదాయకం)"</string>
     <string name="subtype_generic_compact" msgid="3353673321203202922">"<xliff:g id="LANGUAGE_NAME">%s</xliff:g> (కాంపాక్ట్)"</string>
     <string name="subtype_no_language" msgid="7137390094240139495">"భాష లేదు (ఆల్ఫాబెట్)"</string>
     <string name="subtype_no_language_qwerty" msgid="244337630616742604">"ఆల్ఫాబెట్ (QWERTY)"</string>
-    <string name="subtype_no_language_qwertz" msgid="443066912507547976">"ఆల్ఫాబెట్ (QWERTZ)"</string>
-    <string name="subtype_no_language_azerty" msgid="8144348527575640087">"ఆల్ఫాబెట్ (AZERTY)"</string>
-    <string name="subtype_no_language_dvorak" msgid="1564494667584718094">"ఆల్ఫాబెట్ (డ్వోరక్)"</string>
-    <string name="subtype_no_language_colemak" msgid="5837418400010302623">"ఆల్ఫాబెట్ (కోల్‌మాక్)"</string>
-    <string name="subtype_no_language_pcqwerty" msgid="5354918232046200018">"ఆల్ఫాబెట్ (PC)"</string>
     <string name="subtype_emoji" msgid="7483586578074549196">"ఎమోజి"</string>
-    <string name="keyboard_theme" msgid="4909551808526178852">"కీబోర్డ్ థీమ్"</string>
     <string name="custom_input_styles_title" msgid="8429952441821251512">"అనుకూల ఇన్‌పుట్ శైలులు"</string>
     <string name="add_style" msgid="6163126614514489951">"శైలిని జోడించండి"</string>
     <string name="add" msgid="8299699805688017798">"జోడించండి"</string>
@@ -158,15 +128,12 @@
     <string name="setup_finish_action" msgid="276559243409465389">"పూర్తయింది"</string>
     <string name="show_setup_wizard_icon" msgid="5008028590593710830">"యాప్‌ చిహ్నాన్ని చూపు"</string>
     <string name="show_setup_wizard_icon_summary" msgid="4119998322536880213">"లాంచర్‌లో యాప్‌ చిహ్నాన్ని ప్రదర్శించు"</string>
-    <string name="app_name" msgid="6320102637491234792">"నిఘంటువు ప్రదాత"</string>
     <string name="dictionary_provider_name" msgid="3027315045397363079">"నిఘంటువు ప్రదాత"</string>
     <string name="dictionary_service_name" msgid="6237472350693511448">"నిఘంటువు సేవ"</string>
     <string name="download_description" msgid="6014835283119198591">"నిఘంటువు అప్‌డేట్ సమాచారం"</string>
     <string name="dictionary_settings_title" msgid="8091417676045693313">"ఇతర నిఘంటువులు"</string>
     <string name="dictionary_install_over_metered_network_prompt" msgid="3587517870006332980">"నిఘంటువు అందుబాటులో ఉంది"</string>
     <string name="dictionary_settings_summary" msgid="5305694987799824349">"నిఘంటువుల కోసం సెట్టింగ్‌లు"</string>
-    <string name="user_dictionaries" msgid="3582332055892252845">"వినియోగదారు నిఘంటువులు"</string>
-    <string name="default_user_dict_pref_name" msgid="1625055720489280530">"వినియోగదారు నిఘంటువు"</string>
     <string name="dictionary_available" msgid="4728975345815214218">"నిఘంటువు అందుబాటులో ఉంది"</string>
     <string name="dictionary_downloading" msgid="2982650524622620983">"ప్రస్తుతం డౌన్‌లోడ్ చేస్తోంది"</string>
     <string name="dictionary_installed" msgid="8081558343559342962">"ఇన్‌స్టాల్ చేయబడింది"</string>
@@ -174,12 +141,8 @@
     <string name="cannot_connect_to_dict_service" msgid="9216933695765732398">"నిఘంటువు సేవకు కనెక్ట్ చేయడంలో సమస్య"</string>
     <string name="no_dictionaries_available" msgid="8039920716566132611">"నిఘంటువులు ఏవీ అందుబాటులో లేవు"</string>
     <string name="check_for_updates_now" msgid="8087688440916388581">"రీఫ్రెష్ చేయండి"</string>
-    <string name="last_update" msgid="730467549913588780">"చివరిగా నవీకరించబడినది"</string>
-    <string name="message_updating" msgid="4457761393932375219">"అప్‌డేట్‌ల కోసం తనిఖీ చేస్తోంది"</string>
     <string name="message_loading" msgid="5638680861387748936">"లోడ్ చేస్తోంది…"</string>
-    <string name="main_dict_description" msgid="3072821352793492143">"ప్రధాన నిఘంటువు"</string>
     <string name="cancel" msgid="6830980399865683324">"రద్దు చేయి"</string>
-    <string name="go_to_settings" msgid="3876892339342569259">"సెట్టింగ్‌లు"</string>
     <string name="install_dict" msgid="180852772562189365">"ఇన్‌స్టాల్ చేయి"</string>
     <string name="cancel_download_dict" msgid="7843340278507019303">"రద్దు చేయి"</string>
     <string name="delete_dict" msgid="756853268088330054">"తొలగించు"</string>
@@ -192,18 +155,10 @@
     <string name="version_text" msgid="2715354215568469385">"వెర్షన్ <xliff:g id="VERSION_NUMBER">%1$s</xliff:g>"</string>
     <string name="user_dict_settings_add_menu_title" msgid="1254195365689387076">"జోడించు"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4096700390211748168">"నిఘంటువుకి జోడించు"</string>
-    <string name="user_dict_settings_add_screen_title" msgid="5818914331629278758">"పదబంధం"</string>
-    <string name="user_dict_settings_add_dialog_more_options" msgid="5671682004887093112">"మరిన్ని ఎంపికలు"</string>
-    <string name="user_dict_settings_add_dialog_less_options" msgid="2716586567241724126">"తక్కువ ఎంపికలు"</string>
-    <string name="user_dict_settings_add_dialog_confirm" msgid="4703129507388332950">"సరే"</string>
-    <string name="user_dict_settings_add_word_option_name" msgid="6665558053408962865">"పదం:"</string>
     <string name="user_dict_settings_add_shortcut_option_name" msgid="3094731590655523777">"షార్ట్‌కట్:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="4738643440987277705">"భాష:"</string>
     <string name="user_dict_settings_add_word_hint" msgid="4902434148985906707">"పదాన్ని టైప్ చేయండి"</string>
     <string name="user_dict_settings_add_shortcut_hint" msgid="2265453012555060178">"ఐచ్ఛిక షార్ట్‌కట్"</string>
-    <string name="user_dict_settings_edit_dialog_title" msgid="3765774633869590352">"పదాన్ని సవరించు"</string>
-    <string name="user_dict_settings_context_menu_edit_title" msgid="6812255903472456302">"సవరించు"</string>
-    <string name="user_dict_settings_context_menu_delete_title" msgid="8142932447689461181">"తొలగించు"</string>
     <string name="user_dict_settings_empty_text" msgid="6889278304342592383">"మీరు వినియోగదారు నిఘంటువులో పదాలు ఏవీ కలిగి లేరు. పదాన్ని జోడించడానికి, జోడించు (+) బటన్‌ను నొక్కండి."</string>
     <string name="user_dict_settings_all_languages" msgid="8276126583216298886">"అన్ని భాషల కోసం"</string>
     <string name="user_dict_settings_more_languages" msgid="7131268499685180461">"మరిన్ని భాషలు…"</string>

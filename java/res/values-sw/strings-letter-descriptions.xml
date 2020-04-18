@@ -24,8 +24,7 @@
     TODO: Remove these string resources when TTS/TalkBack support these letters.
  -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="spoken_accented_letter_00AA" msgid="4374325261868451570">"Alama ya herufi \"a\" inayowekwa sehemu ya juu ya nambari kama ishara ya nambari zinazowakilisha nafasi au mtiririko"</string>
     <string name="spoken_accented_letter_00B5" msgid="9031387673828823891">"Ishara ndogo"</string>
     <string name="spoken_accented_letter_00BA" msgid="5045198452071207437">"Alama ya herufi \"o\" inayowekwa sehemu ya juu ya nambari kama ishara ya nambari zinazowakilisha nafasi au mtiririko"</string>

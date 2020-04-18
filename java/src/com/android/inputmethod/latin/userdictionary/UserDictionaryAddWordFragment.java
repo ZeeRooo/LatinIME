@@ -16,10 +16,6 @@
 
 package com.android.inputmethod.latin.userdictionary;
 
-import com.android.inputmethod.latin.R;
-import com.android.inputmethod.latin.userdictionary.UserDictionaryAddWordContents.LocaleRenderer;
-import com.android.inputmethod.latin.userdictionary.UserDictionaryLocalePicker.LocationChangedListener;
-
 import android.app.Fragment;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -32,6 +28,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.android.inputmethod.latin.R;
+import com.android.inputmethod.latin.userdictionary.UserDictionaryAddWordContents.LocaleRenderer;
+import com.android.inputmethod.latin.userdictionary.UserDictionaryLocalePicker.LocationChangedListener;
 
 import java.util.ArrayList;
 import java.util.Locale;

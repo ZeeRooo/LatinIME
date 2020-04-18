@@ -34,8 +34,8 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.android.inputmethod.compat.InputConnectionCompatUtils;
 import com.android.inputmethod.latin.common.Constants;
-import com.android.inputmethod.latin.common.UnicodeSurrogate;
 import com.android.inputmethod.latin.common.StringUtils;
+import com.android.inputmethod.latin.common.UnicodeSurrogate;
 import com.android.inputmethod.latin.inputlogic.PrivateCommandPerformer;
 import com.android.inputmethod.latin.settings.SpacingAndPunctuations;
 import com.android.inputmethod.latin.utils.CapsModeUtils;

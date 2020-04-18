@@ -14,7 +14,6 @@
      limitations under the License.
   -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/user_dict_settings_add_dialog_top"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
@@ -36,7 +35,6 @@
     </EditText>
 
     <GridLayout
-        android:id="@+id/user_dictionary_add_word_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dip"
@@ -64,7 +62,6 @@
             android:maxLength="@integer/config_user_dictionary_max_word_length" />
 
         <TextView
-            android:id="@+id/user_dictionary_add_locale_label"
             style="?android:attr/textAppearanceSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

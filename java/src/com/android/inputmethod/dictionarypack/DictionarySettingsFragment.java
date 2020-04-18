@@ -16,8 +16,6 @@
 
 package com.android.inputmethod.dictionarypack;
 
-import com.android.inputmethod.latin.common.LocaleUtils;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -44,6 +42,7 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 
 import com.android.inputmethod.latin.R;
+import com.android.inputmethod.latin.common.LocaleUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;

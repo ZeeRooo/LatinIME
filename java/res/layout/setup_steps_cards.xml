@@ -20,7 +20,6 @@
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
-        android:id="@+id/setup_step_bullets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/setup_step_vertical_padding"
@@ -42,7 +41,6 @@
         android:id="@+id/setup_step_indicator"
         style="@style/setupStepIndicatorStyle" />
     <FrameLayout
-        android:id="@+id/setup_steps_pane"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <include

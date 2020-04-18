@@ -16,8 +16,8 @@
 
 package com.android.inputmethod.dictionarypack;
 
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.MessageDigest;
 
 public final class MD5Calculator {

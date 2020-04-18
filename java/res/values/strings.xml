@@ -49,7 +49,6 @@
     <!-- Settings screen title for advanced settings [CHAR LIMIT=33] -->
     <string name="settings_screen_advanced">Advanced</string>
     <!-- Settings screen title for keyboard theme settings [CHAR LIMIT=33] -->
-    <string name="settings_screen_theme">Theme</string>
 
     <!--  Option for enabling or disabling the split keyboard layout. [CHAR LIMIT=65]-->
     <string name="enable_split_keyboard">Enable split keyboard</string>
@@ -88,13 +87,9 @@
     </string>
 
     <!-- Option name for including other IMEs in the language switch list [CHAR LIMIT=30] -->
-    <string name="include_other_imes_in_language_switch_list">Switch to other input methods</string>
     <!-- Option summary for including other IMEs in the language switch list [CHAR LIMIT=65] -->
-    <string name="include_other_imes_in_language_switch_list_summary">Language switch key covers other input methods too</string>
     <!-- Option to show language switch key [CHAR LIMIT=30] -->
-    <string name="show_language_switch_key">Language switch key</string>
     <!-- Option summary for showing language switch key [CHAR LIMIT=65] -->
-    <string name="show_language_switch_key_summary">Show when multiple input languages are enabled</string>
 
     <!-- Option for the dismiss delay of the key popup [CHAR LIMIT=25] -->
     <string name="key_preview_popup_dismiss_delay">Key popup dismiss delay</string>
@@ -135,7 +130,6 @@
     <!-- Option to configure dictionaries -->
     <string name="configure_dictionaries_title">Add-on dictionaries</string>
     <!-- Name of the main dictionary, as opposed to auxiliary dictionaries (medical/entertainment/sports...) -->
-    <string name="main_dictionary">Main dictionary</string>
 
     <!-- Option to enable showing suggestions -->
     <string name="prefs_show_suggestions">Show correction suggestions</string>
@@ -153,13 +147,9 @@
     <!-- Description for auto correction [CHAR LIMIT=65 (two lines) or 30 (fits on one line, preferable)] -->
     <string name="auto_correction_summary">Spacebar and punctuation automatically correct mistyped words</string>
     <!-- Option to disable auto correction. [CHAR LIMIT=20] -->
-    <string name="auto_correction_threshold_mode_off">Off</string>
     <!-- Option to suggest auto correction suggestions modestly. Auto-corrects only to a word which has small edit distance from typed word. [CHAR LIMIT=20] -->
-    <string name="auto_correction_threshold_mode_modest">Modest</string>
     <!-- Option to suggest auto correction suggestions aggressively. Auto-corrects to a word which has even large edit distance from typed word. [CHAR LIMIT=20] -->
-    <string name="auto_correction_threshold_mode_aggressive">Aggressive</string>
     <!-- Option to suggest auto correction suggestions very aggressively. Auto-corrects to a word which has even large edit distance from typed word. [CHAR LIMIT=20] -->
-    <string name="auto_correction_threshold_mode_very_aggressive">Very aggressive</string>
 
     <!-- Option to enable using next word suggestions. After the user types a space, with this option on, the keyboard will try to predict the next word. -->
     <string name="bigram_prediction">Next-word suggestions</string>
@@ -177,9 +167,7 @@
     <!-- Description for "gesture_floating_preview_text" option. The user can see a suggested word floating under the moving finger during a gesture input. [CHAR LIMIT=65]-->
     <string name="gesture_floating_preview_text_summary">See the suggested word while gesturing</string>
     <!-- Option to enable space aware gesture input. The user can input multiple words by gliding through the space key during a gesture input. [CHAR LIMIT=30]-->
-    <string name="gesture_space_aware">Phrase gesture</string>
     <!-- Description for "gesture_space_aware" option. The user can input multiple words by gliding through the space key during a gesture input.[CHAR LIMIT=65]-->
-    <string name="gesture_space_aware_summary">Input spaces during gestures by gliding to the space key</string>
 
     <!-- Preferences item for enabling speech input -->
     <string name="voice_input">Voice input key</string>
@@ -187,7 +175,6 @@
     <string name="voice_input_disabled_summary">No voice input methods enabled. Check Languages&#160;&amp; input settings.</string>
 
     <!-- Title for configuring input method settings [CHAR LIMIT=35] -->
-    <string name="configure_input_method">Configure input methods</string>
 
     <!-- Title for input language selection screen -->
     <string name="language_selection_title">Languages</string>
@@ -200,15 +187,11 @@
     <string name="select_language">Languages</string>
 
     <!-- Add to dictionary hint -->
-    <string name="hint_add_to_dictionary">Tap again to save</string>
     <!-- Add to dictionary hint -->
-    <string name="hint_add_to_dictionary_without_word">Tap here to save</string>
 
     <!-- Inform the user that a particular language has an available dictionary -->
-    <string name="has_dictionary">Dictionary available</string>
 
     <!-- Title of the item to change the keyboard theme [CHAR LIMIT=20]-->
-    <string name="keyboard_layout">Keyboard theme</string>
 
     <!-- Title of the preference item for switching accounts [CHAR LIMIT=30] -->
     <string name="switch_accounts">Switch accounts</string>
@@ -237,28 +220,22 @@
          (US) should be an abbreviation of United States to fit in the CHAR LIMIT. -->
     <string name="subtype_es_US">Spanish (US)</string>
     <!-- Description for Hinglish (https://en.wikipedia.org/wiki/Hinglish) keyboard subtype [CHAR LIMIT=25] -->
-    <string name="subtype_hi_ZZ">Hinglish</string>
     <!-- Description for Serbian (Latin) keyboard subtype [CHAR LIMIT=25]
          (Latin) can be an abbreviation to fit in the CHAR LIMIT. -->
     <string name="subtype_sr_ZZ">Serbian (Latin)</string>
     <!-- Description for English (UK) keyboard subtype with explicit keyboard layout [CHAR LIMIT=25]
          (UK) should be an abbreviation of United Kingdom to fit in the CHAR LIMIT.
          This should be identical to subtype_en_GB aside from the trailing (%s). -->
-    <string name="subtype_with_layout_en_GB">English (UK) (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for English (US) keyboard subtype with explicit keyboard layout [CHAR LIMIT=25]
          (US) should be an abbreviation of United States to fit in the CHAR LIMIT.
          This should be identical to subtype_en_US aside from the trailing (%s). -->
-    <string name="subtype_with_layout_en_US">English (US) (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for Spanish (US) keyboard subtype with explicit keyboard layout [CHAR LIMIT=25]
          (US) should be an abbreviation of United Statesn to fit in the CHAR LIMIT.
          This should be identical to subtype_es_US aside from the trailing (%s). -->
-    <string name="subtype_with_layout_es_US">Spanish (US) (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for Hinglish (https://en.wikipedia.org/wiki/Hinglish) keyboard subtype with explicit keyboard layout [CHAR LIMIT=25]
          This should be identical to subtype_hi_ZZ aside from the trailing (%s). -->
-    <string name="subtype_with_layout_hi_ZZ">Hinglish (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for Serbian (Latin) keyboard subtype with explicit keyboard layout [CHAR LIMIT=25]
          This should be identical to subtype_sr_ZZ aside from the trailing (%s). -->
-    <string name="subtype_with_layout_sr_ZZ">Serbian (<xliff:g id="KEYBOARD_LAYOUT" example="QWERTY">%s</xliff:g>)</string>
     <!-- Description for "LANGUAGE_NAME" (Traditional) keyboard subtype [CHAR LIMIT=25]
          (Traditional) can be an abbreviation to fit in the CHAR LIMIT. -->
     <string name="subtype_generic_traditional"><xliff:g id="LANGUAGE_NAME" example="Nepali">%s</xliff:g> (Traditional)</string>
@@ -296,7 +273,6 @@ keyboard that is meant for them to be able to enter Latin characters as opposed 
 are used to. This keyboard does not provide a dictionary, and it is not tied to any specific
 language among those that use the Latin alphabet. This keyboard is laid out in the QWERTZ
 disposition rather than other common dispositions for Latin languages. [CHAR LIMIT=25] -->
-    <string name="subtype_no_language_qwertz">Alphabet (QWERTZ)</string>
     <!-- This string is displayed in the description for a keyboard type. It refers specifically to
 the Latin alphabet, as opposed to Cyrillic, Arabic, Hebrew or other scripts.
 When the device is configured to use a language using a script other than the Latin alphabet, the
@@ -307,7 +283,6 @@ keyboard that is meant for them to be able to enter Latin characters as opposed 
 are used to. This keyboard does not provide a dictionary, and it is not tied to any specific
 language among those that use the Latin alphabet. This keyboard is laid out in the AZERTY
 disposition rather than other common dispositions for Latin languages. [CHAR LIMIT=25] -->
-    <string name="subtype_no_language_azerty">Alphabet (AZERTY)</string>
     <!-- This string is displayed in the description for a keyboard type. It refers specifically to
 the Latin alphabet, as opposed to Cyrillic, Arabic, Hebrew or other scripts.
 When the device is configured to use a language using a script other than the Latin alphabet, the
@@ -318,7 +293,6 @@ keyboard that is meant for them to be able to enter Latin characters as opposed 
 are used to. This keyboard does not provide a dictionary, and it is not tied to any specific
 language among those that use the Latin alphabet. This keyboard is laid out in the Dvorak
 disposition rather than other common dispositions for Latin languages. [CHAR LIMIT=25] -->
-    <string name="subtype_no_language_dvorak">Alphabet (Dvorak)</string>
     <!-- This string is displayed in the description for a keyboard type. It refers specifically to
 the Latin alphabet, as opposed to Cyrillic, Arabic, Hebrew or other scripts.
 When the device is configured to use a language using a script other than the Latin alphabet, the
@@ -329,7 +303,6 @@ keyboard that is meant for them to be able to enter Latin characters as opposed 
 are used to. This keyboard does not provide a dictionary, and it is not tied to any specific
 language among those that use the Latin alphabet. This keyboard is laid out in the Colemak
 disposition rather than other common dispositions for Latin languages. [CHAR LIMIT=25] -->
-    <string name="subtype_no_language_colemak">Alphabet (Colemak)</string>
     <!-- This string is displayed in the description for a keyboard type. It refers specifically to
 the Latin alphabet, as opposed to Cyrillic, Arabic, Hebrew or other scripts.
 When the device is configured to use a language using a script other than the Latin alphabet, the
@@ -341,20 +314,14 @@ are used to. This keyboard does not provide a dictionary, and it is not tied to 
 language among those that use the Latin alphabet. This keyboard is laid out in the QWERTY PC
 disposition that offers additional keys, but smaller keys compared to other common dispositions for
 mobile devices. [CHAR LIMIT=25] -->
-    <string name="subtype_no_language_pcqwerty">Alphabet (PC)</string>
     <!-- Description for Emoji keyboard subtype [CHAR LIMIT=25] -->
     <string name="subtype_emoji">Emoji</string>
 
     <!-- Title of the preference settings for switching keyboard theme [CHAR LIMIT=35] -->
-    <string name="keyboard_theme">Keyboard theme</string>
     <!-- The keyboard theme name, Holo White. This is marked as translatable="false" because this is a proper name of system-wide UI Theme. -->
-    <string name="keyboard_theme_holo_white" translatable="false">Holo White</string>
     <!-- The keyboard theme name, Holo Blue. This is marked as translatable="false" because this is a proper name of system-wide UI Theme.  -->
-    <string name="keyboard_theme_holo_blue" translatable="false">Holo Blue</string>
     <!-- The keyboard theme name, Material Dark. This is marked as translatable="false" because this is a proper name of system-wide UI Theme.  -->
-    <string name="keyboard_theme_material_dark" translatable="false">Material Dark</string>
     <!-- The keyboard theme name, Material Light. This is marked as translatable="false" because this is a proper name of system-wide UI Theme.  -->
-    <string name="keyboard_theme_material_light" translatable="false">Material Light</string>
 
     <!-- Title of the preference settings for custom input styles (language and keyboard layout pairs) [CHAR LIMIT=35]-->
     <string name="custom_input_styles_title">Custom input styles</string>
@@ -437,7 +404,6 @@ mobile devices. [CHAR LIMIT=25] -->
     <string name="show_setup_wizard_icon_summary">Display application icon in the launcher</string>
 
     <!-- The dictionary provider application name. Visible in Settings/Applications/Manage applications. -->
-    <string name="app_name">Dictionary Provider</string>
     <!-- The dictionary provider ContentProvider name. Visible in Settings/Applications/Running services. -->
     <string name="dictionary_provider_name">Dictionary Provider</string>
     <!-- The dictionary provider Service name. Visible in Settings/Applications/Running services. -->
@@ -452,9 +418,7 @@ mobile devices. [CHAR LIMIT=25] -->
     <string name="dictionary_install_over_metered_network_prompt">Dictionary available</string>
     <string name="dictionary_settings_summary">Settings for dictionaries</string>
     <!-- Name of the user dictionaries settings category -->
-    <string name="user_dictionaries">User dictionaries</string>
     <!-- Name for the "user dictionary" preference item when there is only one -->
-    <string name="default_user_dict_pref_name">User dictionary</string>
     <!-- Message about some dictionary indicating it can be downloaded, but hasn't been yet -->
     <string name="dictionary_available">Dictionary available</string>
     <!-- Message about some dictionary indicating it is downloading and should be available soon -->
@@ -472,20 +436,16 @@ mobile devices. [CHAR LIMIT=25] -->
     <!-- Title of the options to press to refresh the list (as in, check for updates now) [CHAR_LIMIT=50] -->
     <string name="check_for_updates_now">Refresh</string>
     <!-- Hint to tell when the data was last updated. Usage : "Last updated [date]", may contain a : or so. [CHAR LIMIT=45] -->
-    <string name="last_update">Last updated</string>
 
     <!-- Message to display in a dialog box while we are actively updating the word list [CHAR LIMIT=60] -->
-    <string name="message_updating">Checking for updates</string>
     <!-- Message to display while the add-on dictionary list is updating [no space constraints on this, there is plenty of space but shorter is better because it's only on the screen for a second] -->
     <string name="message_loading">Loading&#x2026;</string>
 
     <!-- String to explain this dictionary is the main dictionary for this language [CHAR_LIMIT=30] -->
-    <string name="main_dict_description">Main dictionary</string>
 
     <!-- Standard message to dismiss a dialog box -->
     <string name="cancel">Cancel</string>
     <!-- Title of the button in a dialog box. The button takes the user to the keyboard settings. [CHAR LIMIT=15] -->
-    <string name="go_to_settings">Settings</string>
 
     <!-- Action to download and install a dictionary [CHAR_LIMIT=15] -->
     <string name="install_dict">Install</string>
@@ -517,7 +477,6 @@ Tip: You can download and remove dictionaries by going to &lt;b>Languages&#160;&
 
     <!-- User dictionary settings -->
     <!-- User dictionary settings.  The summary of the listem item to go into the User dictionary settings screen. -->
-    <string name="user_dict_settings_summary" translatable="false">""</string>
     <!-- User dictionary settings. The title of the menu item to add a new word to the user dictionary. -->
     <!-- This resource is corresponding to  msgid="4056762757149923551" -->
     <string name="user_dict_settings_add_menu_title">Add</string>
@@ -526,19 +485,14 @@ Tip: You can download and remove dictionaries by going to &lt;b>Languages&#160;&
     <string name="user_dict_settings_add_dialog_title">Add to dictionary</string>
     <!-- User dictionary settings. The title of the screen to add/edit a new word to the user dictionary; it describes the phrase that will be added to the user dictionary. [CHAR LIMIT=25] -->
     <!-- This resource is corresponding to msgid="742580720124344291" -->
-    <string name="user_dict_settings_add_screen_title">Phrase</string>
     <!-- User dictionary settings. Text on the dialog button to pop more options for adding a word. [CHAR LIMIT=16] -->
     <!-- This resource is corresponding to msgid="8848798370746019825" -->
-    <string name="user_dict_settings_add_dialog_more_options">More options</string>
     <!-- User dictionary settings. Text on the dialog button mask advanced options. [CHAR LIMIT=15] -->
     <!-- This resource is corresponding to msgid="2441785268726036101" -->
-    <string name="user_dict_settings_add_dialog_less_options">Less options</string>
     <!-- User dictionary settings. Text on the dialog button to confirm adding a word. [CHAR LIMIT=15] -->
     <!-- This resource is corresponding to msgid="6225823625332416144" -->
-    <string name="user_dict_settings_add_dialog_confirm">OK</string>
     <!-- User dictionary settings. Label to put before the word field (that's the word that will actually be added to the user dictionary when OK is pressed). [CHAR LIMIT=20] -->
     <!-- This resource is corresponding to msgid="7868879174905963135" -->
-    <string name="user_dict_settings_add_word_option_name">Word:</string>
     <!-- User dictionary settings. Label to put before the shortcut field (once a shortcut is registered, the user can type the shortcut and get the word it points to in the suggestions). [CHAR LIMIT=20] -->
     <!-- This resource is corresponding to msgid="660089258866063925" -->
     <string name="user_dict_settings_add_shortcut_option_name">Shortcut:</string>
@@ -553,13 +507,10 @@ Tip: You can download and remove dictionaries by going to &lt;b>Languages&#160;&
     <string name="user_dict_settings_add_shortcut_hint">Optional shortcut</string>
     <!-- User dictionary settings. The title of the dialog to edit an existing word in the user dictionary. -->
     <!-- This resource is corresponding to msgid="8967476444840548674" -->
-    <string name="user_dict_settings_edit_dialog_title">Edit word</string>
     <!-- User dictionary settings. The title of the context menu item to edit the current word -->
     <!-- This resource is corresponding to msgid="2210564879320004837" -->
-    <string name="user_dict_settings_context_menu_edit_title">Edit</string>
     <!-- User dictionary settings. The title of the context menu item to delete the current word -->
     <!-- This resource is corresponding to msgid="9140703913776549054" -->
-    <string name="user_dict_settings_context_menu_delete_title">Delete</string>
     <!-- User dictionary settings. The text to show when there are no user-defined words in the dictionary  [CHAR LIMIT=200] -->
     <!-- This resource is corresponding to msgid="8165273379942105271" -->
     <string name="user_dict_settings_empty_text">You don\'t have any words in the user dictionary. To add a word, tap the Add (+) button.</string>

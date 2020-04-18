@@ -16,10 +16,10 @@
 
 package com.android.inputmethod.keyboard.internal;
 
+import android.util.Log;
+
 import com.android.inputmethod.annotations.UsedForTesting;
 import com.android.inputmethod.keyboard.internal.MatrixUtils.MatrixOperationFailedException;
-
-import android.util.Log;
 
 import java.util.Arrays;
 

@@ -22,8 +22,8 @@ import android.os.Message;
 
 import com.android.inputmethod.compat.LooperCompatUtils;
 import com.android.inputmethod.latin.LatinIME;
-import com.android.inputmethod.latin.SuggestedWords;
 import com.android.inputmethod.latin.Suggest.OnGetSuggestedWordsCallback;
+import com.android.inputmethod.latin.SuggestedWords;
 import com.android.inputmethod.latin.common.InputPointers;
 
 /**

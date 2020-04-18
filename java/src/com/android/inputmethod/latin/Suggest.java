@@ -18,9 +18,6 @@ package com.android.inputmethod.latin;
 
 import android.text.TextUtils;
 
-import static com.android.inputmethod.latin.define.DecoderSpecificConstants.SHOULD_AUTO_CORRECT_USING_NON_WHITE_LISTED_SUGGESTION;
-import static com.android.inputmethod.latin.define.DecoderSpecificConstants.SHOULD_REMOVE_PREVIOUSLY_REJECTED_SUGGESTION;
-
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.latin.SuggestedWords.SuggestedWordInfo;
 import com.android.inputmethod.latin.common.Constants;
@@ -36,6 +33,9 @@ import java.util.HashMap;
 import java.util.Locale;
 
 import javax.annotation.Nonnull;
+
+import static com.android.inputmethod.latin.define.DecoderSpecificConstants.SHOULD_AUTO_CORRECT_USING_NON_WHITE_LISTED_SUGGESTION;
+import static com.android.inputmethod.latin.define.DecoderSpecificConstants.SHOULD_REMOVE_PREVIOUSLY_REJECTED_SUGGESTION;
 
 /**
  * This class loads a dictionary and provides a list of suggestions for a given sequence of

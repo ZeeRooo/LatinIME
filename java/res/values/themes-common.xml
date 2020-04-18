@@ -110,7 +110,7 @@
          delete button, need themed {@link com.android.inputmethod.keyboard.KeyboardView}
          attributes. -->
     <style name="EmojiPalettesView" />
-    <style name="MoreKeysKeyboard" />
+
     <style name="MoreKeysKeyboardView" />
     <style name="SuggestionStripView" />
     <style name="SuggestionWord">

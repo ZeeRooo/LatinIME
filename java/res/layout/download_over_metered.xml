@@ -50,13 +50,11 @@
 
     <!-- The buttons to trigger download or wait -->
     <LinearLayout
-        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?android:attr/buttonBarStyle">
 
         <Button
-            android:id="@+id/deny_button"
             android:text="@string/do_not_download_over_metered"
             android:layout_width="0dip"
             android:layout_height="match_parent"

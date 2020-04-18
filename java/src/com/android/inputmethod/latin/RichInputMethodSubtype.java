@@ -16,8 +16,6 @@
 
 package com.android.inputmethod.latin;
 
-import static com.android.inputmethod.latin.common.Constants.Subtype.KEYBOARD_MODE;
-
 import android.os.Build;
 import android.util.Log;
 import android.view.inputmethod.InputMethodSubtype;
@@ -33,6 +31,8 @@ import java.util.Locale;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import static com.android.inputmethod.latin.common.Constants.Subtype.KEYBOARD_MODE;
 
 /**
  * Enrichment class for InputMethodSubtype to enable concurrent multi-lingual input.

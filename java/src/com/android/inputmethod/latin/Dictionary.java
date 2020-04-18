@@ -22,9 +22,9 @@ import com.android.inputmethod.latin.common.ComposedData;
 import com.android.inputmethod.latin.settings.SettingsValuesForSuggestion;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Locale;
 
 /**
  * Abstract base class for a dictionary that can do a fuzzy search for words based on a set of key

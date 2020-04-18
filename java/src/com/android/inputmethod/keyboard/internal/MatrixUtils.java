@@ -16,9 +16,9 @@
 
 package com.android.inputmethod.keyboard.internal;
 
-import com.android.inputmethod.annotations.UsedForTesting;
-
 import android.util.Log;
+
+import com.android.inputmethod.annotations.UsedForTesting;
 
 import java.util.Arrays;
 

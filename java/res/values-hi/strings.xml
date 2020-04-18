@@ -18,8 +18,7 @@
 */
  -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="english_ime_input_options" msgid="3909945612939668554">"इनपुट विकल्‍प"</string>
     <string name="use_contacts_for_spellchecking_option_title" msgid="5374120998125353898">"संपर्कों को सर्च करें"</string>
     <string name="use_contacts_for_spellchecking_option_summary" msgid="8754413382543307713">"स्पेलिंग जाँचने वाली सेवा आपकी संपर्क सूची के संपर्कों इस्तेमाल करता है"</string>
@@ -32,7 +31,6 @@
     <string name="settings_screen_gesture" msgid="8826372746901183556">"संकेतोें द्वारा टाइपिंग"</string>
     <string name="settings_screen_correction" msgid="1616818407747682955">"लेख सुधार"</string>
     <string name="settings_screen_advanced" msgid="7472408607625972994">"बेहतर सेटिंग"</string>
-    <string name="settings_screen_theme" msgid="2137262503543943871">"थीम"</string>
     <string name="enable_split_keyboard" msgid="4177264923999493614">"स्प्लिट कीबोर्ड चालू करें"</string>
     <string name="cloud_sync_title" msgid="8579271074443847055">"Google कीबोर्ड समन्‍वयन"</string>
     <string name="cloud_sync_summary" msgid="7684887161145650857">"समन्‍वयन चालू किया गया है"</string>
@@ -46,10 +44,6 @@
     <string name="cloud_sync_opt_in_text" msgid="9176039655776298248">"आपकी निजी डिक्शनरी को Google सर्वर से सिंक किया जाएगा और उसका बैक अप लिया जाएगा. हमारे उत्पादों को बेहतर बनाने में मदद करने के लिए हो सकता है कि इस बात के आंकड़े इकट्ठा किये जाएं कि एक शब्द को कितनी बार दोहराया गया है. सभी जानकारी को इकट्ठा करना और उसका इस्तेमाल करना "<a href="https://www.google.com/policies/privacy">"Google की निजता नीति"</a>" के अनुपालन में होगा."</string>
     <string name="add_account_to_enable_sync" msgid="7836932571852055265">"यह सुविधा सक्षम करने के लिए इस डिवाइस पर एक Google खाता जोड़ें"</string>
     <string name="cloud_sync_summary_disabled_work_profile" msgid="1381770407303129164">"Google Apps for Business खातों वाले डिवाइस के लिए समन्वय उपलब्ध नहीं है"</string>
-    <string name="include_other_imes_in_language_switch_list" msgid="4533689960308565519">"अन्‍य इनपुट पद्धतियों पर जाएं"</string>
-    <string name="include_other_imes_in_language_switch_list_summary" msgid="840637129103317635">"भाषा स्‍विच कुंजी में अन्‍य इनपुट पद्धतियां भी शामिल हैं"</string>
-    <string name="show_language_switch_key" msgid="5915478828318774384">"भाषा स्विच कुंजी"</string>
-    <string name="show_language_switch_key_summary" msgid="7343403647474265713">"एकाधिक इनपुट भाषाएं सक्षम होने पर दिखाएं"</string>
     <string name="key_preview_popup_dismiss_delay" msgid="6213164897443068248">"कुंजी पॉपअप खारिज़ विलंब"</string>
     <string name="key_preview_popup_dismiss_no_delay" msgid="2096123151571458064">"कोई विलंब नहीं"</string>
     <string name="key_preview_popup_dismiss_default_delay" msgid="2166964333903906734">"सामान्य"</string>
@@ -65,17 +59,12 @@
     <string name="auto_cap_summary" msgid="7934452761022946874">"प्रत्येक वाक्य के पहले शब्द को बड़ा लिखें"</string>
     <string name="edit_personal_dictionary" msgid="3996910038952940420">"निजी शब्दकोश"</string>
     <string name="configure_dictionaries_title" msgid="4238652338556902049">"एड-ऑन शब्दकोश"</string>
-    <string name="main_dictionary" msgid="4798763781818361168">"मुख्‍य डिक्‍शनरी"</string>
     <string name="prefs_show_suggestions" msgid="8026799663445531637">"सुधार सुझाव दिखाएं"</string>
     <string name="prefs_show_suggestions_summary" msgid="1583132279498502825">"लिखते समय सुझाए गए शब्‍द दिखाएं"</string>
     <string name="prefs_block_potentially_offensive_title" msgid="5078480071057408934">"आपत्तिजनक शब्द रोकें"</string>
     <string name="prefs_block_potentially_offensive_summary" msgid="2371835479734991364">"संभावित आपत्तिजनक शब्दों का सुझाव न दें"</string>
     <string name="auto_correction" msgid="7630720885194996950">"स्‍वत: सुधार"</string>
     <string name="auto_correction_summary" msgid="5625751551134658006">"Spacebar और विराम चिह्न गलत लिखे गए शब्‍दों को स्‍वचालित रूप से ठीक करते हैं"</string>
-    <string name="auto_correction_threshold_mode_off" msgid="8470882665417944026">"बंद"</string>
-    <string name="auto_correction_threshold_mode_modest" msgid="8788366690620799097">"साधारण"</string>
-    <string name="auto_correction_threshold_mode_aggressive" msgid="7319007299148899623">"तेज़"</string>
-    <string name="auto_correction_threshold_mode_very_aggressive" msgid="1853309024129480416">"बहुत तेज़"</string>
     <string name="bigram_prediction" msgid="1084449187723948550">"अगले शब्द के सुझाव"</string>
     <string name="bigram_prediction_summary" msgid="3896362682751109677">"सुझाव बनाने में पिछले शब्द का उपयोग करें"</string>
     <string name="gesture_input" msgid="826951152254563827">"जेश्चर टाइपिंग चालू करें"</string>
@@ -83,18 +72,11 @@
     <string name="gesture_preview_trail" msgid="3802333369335722221">"हाथ के जेस्चर का ट्रेल दिखाएं"</string>
     <string name="gesture_floating_preview_text" msgid="4443240334739381053">"डायनामिक फ़्लोटिंग की झलक"</string>
     <string name="gesture_floating_preview_text_summary" msgid="4472696213996203533">"संकेतोें द्वारा टाइपिंग करते समय सुझाया गया शब्द देखें"</string>
-    <string name="gesture_space_aware" msgid="2078291600664682496">"वाक्यांश जेस्चर"</string>
-    <string name="gesture_space_aware_summary" msgid="4371385818348528538">"स्पेस कुंजी तक ग्लाइड करके जेस्चर के दौरान रिक्तियां इनपुट करें"</string>
     <string name="voice_input" msgid="3583258583521397548">"ध्वनि संचालन बटन"</string>
     <string name="voice_input_disabled_summary" msgid="6323489602945135165">"बोलकर फ़ोन को निर्देश देने का तरीका सक्षम नहीं है. भाषा और इनपुट सेटिंग जाँचें."</string>
-    <string name="configure_input_method" msgid="373356270290742459">"इनपुट का तरीका कॉन्‍फ़िगर करें"</string>
     <string name="language_selection_title" msgid="3666971864764478269">"भाषाएं"</string>
     <string name="help_and_feedback" msgid="5328219371839879161">"सहायता और फ़ीडबैक"</string>
     <string name="select_language" msgid="5709487854987078367">"भाषाएं"</string>
-    <string name="hint_add_to_dictionary" msgid="2645988432867033007">"सहेजने के लिए फिर से टैप करें"</string>
-    <string name="hint_add_to_dictionary_without_word" msgid="6710206006427574423">"सहेजने के लिए यहां टैप करें"</string>
-    <string name="has_dictionary" msgid="6071847973466625007">"शब्‍दकोश उपलब्‍ध है"</string>
-    <string name="keyboard_layout" msgid="8451164783510487501">"कीबोर्ड थीम"</string>
     <string name="switch_accounts" msgid="3321216593719006162">"खाते स्‍विच करें"</string>
     <string name="no_accounts_selected" msgid="2073821619103904330">"कोई खाता नहीं चुना गया"</string>
     <string name="account_selected" msgid="2846876462199625974">"वर्तमान में <xliff:g id="EMAIL_ADDRESS">%1$s</xliff:g> का उपयोग कर रहा है"</string>
@@ -105,24 +87,12 @@
     <string name="subtype_en_GB" msgid="88170601942311355">"अंग्रेज़ी (यूके)"</string>
     <string name="subtype_en_US" msgid="6160452336634534239">"अंग्रेज़ी (यूएस)"</string>
     <string name="subtype_es_US" msgid="5583145191430180200">"स्पेनिश (यूएस)"</string>
-    <string name="subtype_hi_ZZ" msgid="8860448146262798623">"हिंग्लिश"</string>
     <string name="subtype_sr_ZZ" msgid="9059219552986034343">"सर्बियाई (लैटिन)"</string>
-    <string name="subtype_with_layout_en_GB" msgid="1931018968641592304">"अंग्रेज़ी (यूके) (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_en_US" msgid="8809311287529805422">"अंग्रेज़ी (यूएस) (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_es_US" msgid="510930471167541338">"स्‍पेनिश (यूएस) (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_hi_ZZ" msgid="6827402953860547044">"हिंग्लिश (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
-    <string name="subtype_with_layout_sr_ZZ" msgid="2859024772719772407">"सर्बियाई (<xliff:g id="KEYBOARD_LAYOUT">%s</xliff:g>)"</string>
     <string name="subtype_generic_traditional" msgid="8584594350973800586">"<xliff:g id="LANGUAGE_NAME">%s</xliff:g> (पारंपरिक)"</string>
     <string name="subtype_generic_compact" msgid="3353673321203202922">"<xliff:g id="LANGUAGE_NAME">%s</xliff:g> (संक्षिप्त)"</string>
     <string name="subtype_no_language" msgid="7137390094240139495">"भाषा उपलब्ध नहीं है (लैटिन वर्णाक्षर)"</string>
     <string name="subtype_no_language_qwerty" msgid="244337630616742604">"वर्णाक्षर (QWERTY)"</string>
-    <string name="subtype_no_language_qwertz" msgid="443066912507547976">"वर्णाक्षर (QWERTZ)"</string>
-    <string name="subtype_no_language_azerty" msgid="8144348527575640087">"वर्णाक्षर (AZERTY)"</string>
-    <string name="subtype_no_language_dvorak" msgid="1564494667584718094">"वर्णाक्षर (Dvorak)"</string>
-    <string name="subtype_no_language_colemak" msgid="5837418400010302623">"वर्णाक्षर (Colemak)"</string>
-    <string name="subtype_no_language_pcqwerty" msgid="5354918232046200018">"वर्णाक्षर (PC)"</string>
     <string name="subtype_emoji" msgid="7483586578074549196">"Emoji"</string>
-    <string name="keyboard_theme" msgid="4909551808526178852">"कीबोर्ड थीम"</string>
     <string name="custom_input_styles_title" msgid="8429952441821251512">"आपके मुताबिक इनपुट के तरीके"</string>
     <string name="add_style" msgid="6163126614514489951">"शैली जोड़ें"</string>
     <string name="add" msgid="8299699805688017798">"जोड़ें"</string>
@@ -158,15 +128,12 @@
     <string name="setup_finish_action" msgid="276559243409465389">"समाप्त"</string>
     <string name="show_setup_wizard_icon" msgid="5008028590593710830">"ऐप्लिकेशन का आइकॉन दिखाएं"</string>
     <string name="show_setup_wizard_icon_summary" msgid="4119998322536880213">"लॉन्चर में ऐप आइकॉन दिखाएं"</string>
-    <string name="app_name" msgid="6320102637491234792">"डिक्‍शनरी प्रदाता"</string>
     <string name="dictionary_provider_name" msgid="3027315045397363079">"डिक्‍शनरी प्रदाता"</string>
     <string name="dictionary_service_name" msgid="6237472350693511448">"डिक्‍शनरी सेवा"</string>
     <string name="download_description" msgid="6014835283119198591">"डिक्शनरी में बदलाव की जानकारी"</string>
     <string name="dictionary_settings_title" msgid="8091417676045693313">"अन्य शब्दकोष"</string>
     <string name="dictionary_install_over_metered_network_prompt" msgid="3587517870006332980">"शब्दकोश उपलब्‍ध"</string>
     <string name="dictionary_settings_summary" msgid="5305694987799824349">"डिक्‍शनरी की सेटिंग"</string>
-    <string name="user_dictionaries" msgid="3582332055892252845">"उपयोगकर्ता डिक्शनरी"</string>
-    <string name="default_user_dict_pref_name" msgid="1625055720489280530">"उपयोगकर्ता डिक्शनरी"</string>
     <string name="dictionary_available" msgid="4728975345815214218">"शब्दकोश उपलब्‍ध"</string>
     <string name="dictionary_downloading" msgid="2982650524622620983">"वर्तमान में डाउनलोड हो रही है"</string>
     <string name="dictionary_installed" msgid="8081558343559342962">"इंस्‍टॉल है"</string>
@@ -174,12 +141,8 @@
     <string name="cannot_connect_to_dict_service" msgid="9216933695765732398">"शब्दकोश सेवा से कनेक्ट करने में समस्या"</string>
     <string name="no_dictionaries_available" msgid="8039920716566132611">"डिक्‍शनरी अनुपलब्‍ध"</string>
     <string name="check_for_updates_now" msgid="8087688440916388581">"रीफ़्रेश करें"</string>
-    <string name="last_update" msgid="730467549913588780">"आख़री बार अपडेट किया गया"</string>
-    <string name="message_updating" msgid="4457761393932375219">"अपडेट हो रहा है"</string>
     <string name="message_loading" msgid="5638680861387748936">"लोड हो रहा है…"</string>
-    <string name="main_dict_description" msgid="3072821352793492143">"मुख्‍य डिक्‍शनरी"</string>
     <string name="cancel" msgid="6830980399865683324">"रद्द करें"</string>
-    <string name="go_to_settings" msgid="3876892339342569259">"सेटिंग"</string>
     <string name="install_dict" msgid="180852772562189365">"इंस्टॉल करें"</string>
     <string name="cancel_download_dict" msgid="7843340278507019303">"रद्द करें"</string>
     <string name="delete_dict" msgid="756853268088330054">"मिटाएं"</string>
@@ -192,18 +155,10 @@
     <string name="version_text" msgid="2715354215568469385">"वर्शन <xliff:g id="VERSION_NUMBER">%1$s</xliff:g>"</string>
     <string name="user_dict_settings_add_menu_title" msgid="1254195365689387076">"जोड़ें"</string>
     <string name="user_dict_settings_add_dialog_title" msgid="4096700390211748168">"शब्दकोश में जोड़ें"</string>
-    <string name="user_dict_settings_add_screen_title" msgid="5818914331629278758">"वाक्यांश"</string>
-    <string name="user_dict_settings_add_dialog_more_options" msgid="5671682004887093112">"ज़्यादा विकल्प"</string>
-    <string name="user_dict_settings_add_dialog_less_options" msgid="2716586567241724126">"कम विकल्‍प"</string>
-    <string name="user_dict_settings_add_dialog_confirm" msgid="4703129507388332950">"ठीक है"</string>
-    <string name="user_dict_settings_add_word_option_name" msgid="6665558053408962865">"शब्द:"</string>
     <string name="user_dict_settings_add_shortcut_option_name" msgid="3094731590655523777">"शॉर्टकट:"</string>
     <string name="user_dict_settings_add_locale_option_name" msgid="4738643440987277705">"भाषा:"</string>
     <string name="user_dict_settings_add_word_hint" msgid="4902434148985906707">"कोई शब्द लिखें"</string>
     <string name="user_dict_settings_add_shortcut_hint" msgid="2265453012555060178">"वैकल्पिक शॉर्टकट"</string>
-    <string name="user_dict_settings_edit_dialog_title" msgid="3765774633869590352">"शब्द बदलें"</string>
-    <string name="user_dict_settings_context_menu_edit_title" msgid="6812255903472456302">"बदलाव करें"</string>
-    <string name="user_dict_settings_context_menu_delete_title" msgid="8142932447689461181">"मिटाएं"</string>
     <string name="user_dict_settings_empty_text" msgid="6889278304342592383">"आपके पास उपयोगकर्ता डिक्शनरी में कोई भी शब्द नहीं है. कोई शब्द जोड़ने के लिए, जोड़ें (+) बटन छूएं."</string>
     <string name="user_dict_settings_all_languages" msgid="8276126583216298886">"सभी भाषाओं के लिए"</string>
     <string name="user_dict_settings_more_languages" msgid="7131268499685180461">"अधिक भाषाएं…"</string>

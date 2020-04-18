@@ -16,10 +16,6 @@
 
 package com.android.inputmethod.latin;
 
-import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_FLOATING_GESTURE_PREVIEW;
-import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_MICROPHONE;
-import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_MICROPHONE_COMPAT;
-
 import android.text.InputType;
 import android.util.Log;
 import android.view.inputmethod.EditorInfo;
@@ -29,6 +25,10 @@ import com.android.inputmethod.latin.utils.InputTypeUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_FLOATING_GESTURE_PREVIEW;
+import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_MICROPHONE;
+import static com.android.inputmethod.latin.common.Constants.ImeOption.NO_MICROPHONE_COMPAT;
 
 /**
  * Class to hold attributes of the input field.

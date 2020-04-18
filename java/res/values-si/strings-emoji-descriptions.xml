@@ -23,8 +23,7 @@
     TODO: Remove this file when TTS/TalkBack support these Emoji symbols.
  -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="spoken_emoji_00A9" msgid="2859822817116803638">"ප්‍රකාශන හිමිකම් ලකුණ"</string>
     <string name="spoken_emoji_00AE" msgid="7708335454134589027">"ලියාපදිංචි කළ ලකුණ"</string>
     <string name="spoken_emoji_203C" msgid="153340916701508663">"Double exclamation mark"</string>
