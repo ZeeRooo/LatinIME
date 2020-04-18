@@ -26,8 +26,9 @@ import com.android.inputmethod.latin.R;
 
 import java.util.HashMap;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 
 public final class KeyboardIconsSet {
     private static final String TAG = KeyboardIconsSet.class.getSimpleName();
@@ -130,7 +131,7 @@ public final class KeyboardIconsSet {
         return iconId >= 0 && iconId < ICON_NAMES.length;
     }
 
-    @Nonnull
+    @NonNull
     public static String getIconName(final int iconId) {
         return isValidIconId(iconId) ? ICON_NAMES[iconId] : "unknown<" + iconId + ">";
     }

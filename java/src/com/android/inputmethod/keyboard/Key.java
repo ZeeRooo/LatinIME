@@ -38,8 +38,9 @@ import com.zeerooo.Tinter;
 import java.util.Arrays;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 
 import static com.android.inputmethod.keyboard.internal.KeyboardIconsSet.ICON_UNDEFINED;
 import static com.android.inputmethod.latin.common.Constants.CODE_OUTPUT_TEXT;
@@ -135,7 +136,7 @@ public class Key implements Comparable<Key> {
     /**
      * Hit bounding box of the key
      */
-    @Nonnull
+    @NonNull
     private final Rect mHitBox = new Rect();
 
     /**
@@ -287,9 +288,9 @@ public class Key implements Comparable<Key> {
      * @param row     the row that this key belongs to. row's x-coordinate will be the right edge of
      *                this key.
      */
-    public Key(@Nullable final String keySpec, @Nonnull final TypedArray keyAttr,
-               @Nonnull final KeyStyle style, @Nonnull final KeyboardParams params,
-               @Nonnull final KeyboardRow row) {
+    public Key(@Nullable final String keySpec, @NonNull final TypedArray keyAttr,
+               @NonNull final KeyStyle style, @NonNull final KeyboardParams params,
+               @NonNull final KeyboardRow row) {
         mHorizontalGap = isSpacer() ? 0 : params.mHorizontalGap;
         mVerticalGap = params.mVerticalGap;
 
@@ -446,11 +447,11 @@ public class Key implements Comparable<Key> {
      *
      * @param key the original key.
      */
-    protected Key(@Nonnull final Key key) {
+    protected Key(@NonNull final Key key) {
         this(key, key.mMoreKeys);
     }
 
-    private Key(@Nonnull final Key key, @Nullable final MoreKeySpec[] moreKeys) {
+    private Key(@NonNull final Key key, @Nullable final MoreKeySpec[] moreKeys) {
         // Final attributes.
         mCode = key.mCode;
         mLabel = key.mLabel;
@@ -476,9 +477,9 @@ public class Key implements Comparable<Key> {
         mEnabled = key.mEnabled;
     }
 
-    @Nonnull
-    public static Key removeRedundantMoreKeys(@Nonnull final Key key,
-                                              @Nonnull final MoreKeySpec.LettersOnBaseLayout lettersOnBaseLayout) {
+    @NonNull
+    public static Key removeRedundantMoreKeys(@NonNull final Key key,
+                                              @NonNull final MoreKeySpec.LettersOnBaseLayout lettersOnBaseLayout) {
         final MoreKeySpec[] moreKeys = key.getMoreKeys();
         final MoreKeySpec[] filteredMoreKeys = MoreKeySpec.removeRedundantMoreKeys(
                 moreKeys, lettersOnBaseLayout);
@@ -675,7 +676,7 @@ public class Key implements Comparable<Key> {
         return mKeyVisualAttributes;
     }
 
-    @Nonnull
+    @NonNull
     public final Typeface selectTypeface(final KeyDrawParams params) {
         switch (mLabelFlags & LABEL_FLAGS_FONT_MASK) {
             case LABEL_FLAGS_FONT_NORMAL:
@@ -752,7 +753,7 @@ public class Key implements Comparable<Key> {
         return params.mLetterSize;
     }
 
-    @Nonnull
+    @NonNull
     public Typeface selectPreviewTypeface(final KeyDrawParams params) {
         if (previewHasLetterSize()) {
             return selectTypeface(params);
@@ -965,7 +966,7 @@ public class Key implements Comparable<Key> {
         mEnabled = enabled;
     }
 
-    @Nonnull
+    @NonNull
     public Rect getHitBox() {
         return mHitBox;
     }
@@ -1042,8 +1043,8 @@ public class Key implements Comparable<Key> {
      * @return the background drawable of the key.
      * @see android.graphics.drawable.StateListDrawable#setState(int[])
      */
-    @Nonnull
-    public final Drawable selectBackgroundDrawable(@Nonnull final Drawable keyBackground, @Nonnull final Drawable spacebarBackground) {
+    @NonNull
+    public final Drawable selectBackgroundDrawable(@NonNull final Drawable keyBackground, @NonNull final Drawable spacebarBackground) {
         if (mBackgroundType == BACKGROUND_TYPE_SPACEBAR)
             background = spacebarBackground;
         else if (mBackgroundType == BACKGROUND_TYPE_ACTION) {

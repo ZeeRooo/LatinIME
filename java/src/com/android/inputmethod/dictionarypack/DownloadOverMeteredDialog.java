@@ -24,11 +24,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.annotations.ExternallyReferenced;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.common.LocaleUtils;
 
-import javax.annotation.Nullable;
+
 
 /**
  * This implements the dialog for asking the user whether it's okay to download dictionaries over

@@ -28,8 +28,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 
 /**
  * Loads an XML description of a keyboard and stores the attributes of the keys. A keyboard
@@ -50,7 +51,7 @@ import javax.annotation.Nullable;
  * </pre>
  */
 public class Keyboard {
-    @Nonnull
+    @NonNull
     public final KeyboardId mId;
     public final int mThemeId;
 
@@ -82,25 +83,25 @@ public class Keyboard {
     public final int mMaxMoreKeysKeyboardColumn;
 
     /** List of keys in this keyboard */
-    @Nonnull
+    @NonNull
     private final List<Key> mSortedKeys;
-    @Nonnull
+    @NonNull
     public final List<Key> mShiftKeys;
-    @Nonnull
+    @NonNull
     public final List<Key> mAltCodeKeysWhileTyping;
-    @Nonnull
+    @NonNull
     public final KeyboardIconsSet mIconsSet;
 
     private final SparseArray<Key> mKeyCache = new SparseArray<>();
 
-    @Nonnull
+    @NonNull
     private final ProximityInfo mProximityInfo;
-    @Nonnull
+    @NonNull
     private final KeyboardLayout mKeyboardLayout;
 
     private final boolean mProximityCharsCorrectionEnabled;
 
-    public Keyboard(@Nonnull final KeyboardParams params) {
+    public Keyboard(@NonNull final KeyboardParams params) {
         mId = params.mId;
         mThemeId = params.mThemeId;
         mOccupiedHeight = params.mOccupiedHeight;
@@ -128,7 +129,7 @@ public class Keyboard {
                 mMostCommonKeyHeight, mOccupiedWidth, mOccupiedHeight);
     }
 
-    protected Keyboard(@Nonnull final Keyboard keyboard) {
+    protected Keyboard(@NonNull final Keyboard keyboard) {
         mId = keyboard.mId;
         mThemeId = keyboard.mThemeId;
         mOccupiedHeight = keyboard.mOccupiedHeight;
@@ -165,12 +166,12 @@ public class Keyboard {
         return canAssumeNativeHasProximityCharsInfoOfAllKeys || Character.isLetter(code);
     }
 
-    @Nonnull
+    @NonNull
     public ProximityInfo getProximityInfo() {
         return mProximityInfo;
     }
 
-    @Nonnull
+    @NonNull
     public KeyboardLayout getKeyboardLayout() {
         return mKeyboardLayout;
     }
@@ -181,7 +182,7 @@ public class Keyboard {
      * The list may contain {@link Key.Spacer} object as well.
      * @return the sorted unmodifiable list of {@link Key}s of this keyboard.
      */
-    @Nonnull
+    @NonNull
     public List<Key> getSortedKeys() {
         return mSortedKeys;
     }
@@ -208,7 +209,7 @@ public class Keyboard {
         }
     }
 
-    public boolean hasKey(@Nonnull final Key aKey) {
+    public boolean hasKey(@NonNull final Key aKey) {
         if (mKeyCache.indexOfValue(aKey) >= 0) {
             return true;
         }
@@ -234,7 +235,7 @@ public class Keyboard {
      * @return the list of the nearest keys to the given point. If the given
      * point is out of range, then an array of size zero is returned.
      */
-    @Nonnull
+    @NonNull
     public List<Key> getNearestKeys(final int x, final int y) {
         // Avoid dead pixels at edges of the keyboard
         final int adjustedX = Math.max(0, Math.min(x, mOccupiedWidth - 1));
@@ -242,8 +243,8 @@ public class Keyboard {
         return mProximityInfo.getNearestKeys(adjustedX, adjustedY);
     }
 
-    @Nonnull
-    public int[] getCoordinates(@Nonnull final int[] codePoints) {
+    @NonNull
+    public int[] getCoordinates(@NonNull final int[] codePoints) {
         final int length = codePoints.length;
         final int[] coordinates = CoordinateUtils.newCoordinateArray(length);
         for (int i = 0; i < length; ++i) {

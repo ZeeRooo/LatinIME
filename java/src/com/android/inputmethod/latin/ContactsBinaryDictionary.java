@@ -23,6 +23,8 @@ import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.annotations.ExternallyReferenced;
 import com.android.inputmethod.latin.ContactsManager.ContactsChangedListener;
 import com.android.inputmethod.latin.common.StringUtils;
@@ -34,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import javax.annotation.Nullable;
+
 
 public class ContactsBinaryDictionary extends ExpandableBinaryDictionary
         implements ContactsChangedListener {

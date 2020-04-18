@@ -25,6 +25,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.utils.DebugLogUtils;
 
@@ -34,7 +36,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
 
-import javax.annotation.Nullable;
+
 
 /**
  * Various helper functions for the state database

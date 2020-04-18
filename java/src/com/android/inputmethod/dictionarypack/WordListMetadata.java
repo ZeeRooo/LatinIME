@@ -18,7 +18,7 @@ package com.android.inputmethod.dictionarypack;
 
 import android.content.ContentValues;
 
-import javax.annotation.Nonnull;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
 
 /**
  * The metadata for a single word list.
@@ -79,7 +79,7 @@ public class WordListMetadata {
      *
      * If this lacks any required field, IllegalArgumentException is thrown.
      */
-    public static WordListMetadata createFromContentValues(@Nonnull final ContentValues values) {
+    public static WordListMetadata createFromContentValues(@NonNull final ContentValues values) {
         final String id = values.getAsString(MetadataDbHelper.WORDLISTID_COLUMN);
         final Integer type = values.getAsInteger(MetadataDbHelper.TYPE_COLUMN);
         final String description = values.getAsString(MetadataDbHelper.DESCRIPTION_COLUMN);

@@ -16,6 +16,8 @@
 
 package com.android.inputmethod.latin.makedict;
 
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.annotations.UsedForTesting;
 import com.android.inputmethod.latin.BinaryDictionary;
 import com.android.inputmethod.latin.Dictionary;
@@ -27,7 +29,7 @@ import com.android.inputmethod.latin.utils.CombinedFormatUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import javax.annotation.Nullable;
+
 
 /**
  * Utility class for a word with a probability.

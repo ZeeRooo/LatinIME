@@ -23,8 +23,9 @@ import android.util.SparseIntArray;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.utils.ResourceUtils;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 
 public final class KeyVisualAttributes {
     @Nullable
@@ -86,7 +87,7 @@ public final class KeyVisualAttributes {
     }
 
     @Nullable
-    public static KeyVisualAttributes newInstance(@Nonnull final TypedArray keyAttr) {
+    public static KeyVisualAttributes newInstance(@NonNull final TypedArray keyAttr) {
         final int indexCount = keyAttr.getIndexCount();
         for (int i = 0; i < indexCount; i++) {
             final int attrId = keyAttr.getIndex(i);
@@ -98,7 +99,7 @@ public final class KeyVisualAttributes {
         return null;
     }
 
-    private KeyVisualAttributes(@Nonnull final TypedArray keyAttr) {
+    private KeyVisualAttributes(@NonNull final TypedArray keyAttr) {
         if (keyAttr.hasValue(R.styleable.Keyboard_Key_keyTypeface)) {
             mTypeface = Typeface.defaultFromStyle(
                     keyAttr.getInt(R.styleable.Keyboard_Key_keyTypeface, Typeface.NORMAL));

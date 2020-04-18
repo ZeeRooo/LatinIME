@@ -16,9 +16,9 @@
 
 package com.android.inputmethod.latin.common;
 
-import com.android.inputmethod.annotations.UsedForTesting;
+import androidx.annotation.NonNull;
 
-import javax.annotation.Nonnull;
+import com.android.inputmethod.annotations.UsedForTesting;
 
 public final class Constants {
 
@@ -252,7 +252,7 @@ public final class Constants {
         return code >= CODE_SPACE;
     }
 
-    @Nonnull
+    @NonNull
     public static String printableCode(final int code) {
         switch (code) {
         case CODE_SHIFT: return "shift";
@@ -280,8 +280,8 @@ public final class Constants {
         }
     }
 
-    @Nonnull
-    public static String printableCodes(@Nonnull final int[] codes) {
+    @NonNull
+    public static String printableCodes(@NonNull final int[] codes) {
         final StringBuilder sb = new StringBuilder();
         boolean addDelimiter = false;
         for (final int code : codes) {

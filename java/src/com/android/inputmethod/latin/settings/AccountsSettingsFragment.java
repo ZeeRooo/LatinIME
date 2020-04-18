@@ -33,6 +33,8 @@ import android.text.method.LinkMovementMethod;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.annotations.UsedForTesting;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.accounts.AccountStateChangedListener;
@@ -43,7 +45,7 @@ import com.android.inputmethod.latin.utils.ManagedProfileUtils;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import javax.annotation.Nullable;
+
 
 import static com.android.inputmethod.latin.settings.LocalSettingsConstants.PREF_ACCOUNT_NAME;
 import static com.android.inputmethod.latin.settings.LocalSettingsConstants.PREF_ENABLE_CLOUD_SYNC;

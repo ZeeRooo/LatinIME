@@ -24,8 +24,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
+
 
 /**
  * A client for executing HTTP requests synchronously.
@@ -61,7 +61,7 @@ public class BlockingHttpClient {
      * @param request The request payload, if any, or null.
      * @param responseProcessor A processor for the HTTP response.
      */
-    public <T> T execute(@Nullable byte[] request, @Nonnull ResponseProcessor<T> responseProcessor)
+    public <T> T execute(@Nullable byte[] request, @NonNull ResponseProcessor<T> responseProcessor)
             throws IOException, AuthException, HttpException {
         if (DEBUG) {
             Log.d(TAG, "execute: " + mConnection.getURL());

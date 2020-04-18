@@ -45,7 +45,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
 
 /**
  * Keyboard Building helper.
@@ -138,7 +138,7 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
     private static final int DEFAULT_KEYBOARD_COLUMNS = 10;
     private static final int DEFAULT_KEYBOARD_ROWS = 4;
 
-    @Nonnull
+    @NonNull
     protected final KP mParams;
     protected final Context mContext;
     protected final Resources mResources;
@@ -149,7 +149,7 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
     private boolean mTopEdge;
     private Key mRightEdgeKey = null;
 
-    public KeyboardBuilder(final Context context, @Nonnull final KP params) {
+    public KeyboardBuilder(final Context context, @NonNull final KP params) {
         mContext = context;
         final Resources res = context.getResources();
         mResources = res;
@@ -190,7 +190,7 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
         mParams.mProximityCharsCorrectionEnabled = enabled;
     }
 
-    @Nonnull
+    @NonNull
     public Keyboard build() {
         return new Keyboard(mParams);
     }
@@ -848,7 +848,7 @@ public class KeyboardBuilder<KP extends KeyboardParams> {
         mTopEdge = false;
     }
 
-    private void endKey(@Nonnull final Key key) {
+    private void endKey(@NonNull final Key key) {
         mParams.onAddKey(key);
         if (mLeftEdge) {
             key.markAsLeftEdge(mParams);

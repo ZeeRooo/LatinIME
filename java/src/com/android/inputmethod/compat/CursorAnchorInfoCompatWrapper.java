@@ -22,8 +22,8 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.view.inputmethod.CursorAnchorInfo;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
+
 
 /**
  * A wrapper for {@link CursorAnchorInfo}, which has been introduced in API Level 21. You can use
@@ -115,10 +115,10 @@ public class CursorAnchorInfoCompatWrapper {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private static final class RealWrapper extends CursorAnchorInfoCompatWrapper {
 
-        @Nonnull
+        @NonNull
         private final CursorAnchorInfo mInstance;
 
-        public RealWrapper(@Nonnull final CursorAnchorInfo info) {
+        public RealWrapper(@NonNull final CursorAnchorInfo info) {
             mInstance = info;
         }
 

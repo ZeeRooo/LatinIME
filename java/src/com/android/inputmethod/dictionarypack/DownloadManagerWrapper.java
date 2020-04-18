@@ -25,9 +25,11 @@ import android.database.sqlite.SQLiteException;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 import java.io.FileNotFoundException;
 
-import javax.annotation.Nullable;
+
 
 /**
  * A class to help with calling DownloadManager methods.

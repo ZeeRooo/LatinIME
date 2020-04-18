@@ -26,6 +26,8 @@ import android.provider.UserDictionary.Words;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 import com.android.inputmethod.annotations.ExternallyReferenced;
 import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 
@@ -33,7 +35,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Locale;
 
-import javax.annotation.Nullable;
+
 
 /**
  * An expandable dictionary that stores the words in the user dictionary provider into a binary

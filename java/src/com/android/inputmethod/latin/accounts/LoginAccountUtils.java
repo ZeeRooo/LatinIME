@@ -18,7 +18,7 @@ package com.android.inputmethod.latin.accounts;
 
 import android.content.Context;
 
-import javax.annotation.Nonnull;
+import androidx.annotation.NonNull;import androidx.annotation.Nullable;
 
 /**
  * Utility class for retrieving accounts that may be used for login.
@@ -39,7 +39,7 @@ public class LoginAccountUtils {
      *
      * @return an array of accounts. Empty (never null) if no accounts are available for login.
      */
-    @Nonnull
+    @NonNull
     @SuppressWarnings("unused")
     public static String[] getAccountsForLogin(final Context context) {
         return new String[0];
