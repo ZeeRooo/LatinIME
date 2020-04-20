@@ -40,7 +40,6 @@ import com.android.inputmethod.keyboard.internal.KeyVisualAttributes;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.common.Constants;
 import com.android.inputmethod.latin.utils.TypefaceUtils;
-import com.zeerooo.KeyEffects;
 import com.zeerooo.Tinter;
 
 import java.util.HashSet;
@@ -131,12 +130,8 @@ public class KeyboardView extends View {
     @NonNull
     private final Canvas mOffscreenCanvas = new Canvas();
     @NonNull
-    private final Paint mPaint = new Paint();
+    protected final Paint mPaint = new Paint();
     private final Paint.FontMetrics mFontMetrics = new Paint.FontMetrics();
-
-    private KeyEffects keyEffects = new KeyEffects();
-
-    private boolean draw = true;
 
     public KeyboardView(final Context context, final AttributeSet attrs) {
         this(context, attrs, R.attr.keyboardViewStyle);
@@ -208,10 +203,6 @@ public class KeyboardView extends View {
         mKeyDrawParams.updateParams(keyHeight, keyboard.mKeyVisualAttributes);
         invalidateAllKeys();
         requestLayout();
-
-        keyEffects.initialize(keyboard, mPaint);
-
-        draw = true;
     }
 
     /**
@@ -253,26 +244,22 @@ public class KeyboardView extends View {
 
     @Override
     protected void onDraw(final Canvas canvas) {
-        super.onDraw(keyEffects.draw(canvas));
-
-        if (draw) {
-            if (canvas.isHardwareAccelerated()) {
-                onDrawKeyboard(canvas);
-                return;
-            }
-
-            final boolean bufferNeedsUpdates = mInvalidateAllKeys || !mInvalidatedKeys.isEmpty();
-            if (bufferNeedsUpdates || mOffscreenBuffer == null) {
-                if (maybeAllocateOffscreenBuffer()) {
-                    mInvalidateAllKeys = true;
-                    // TODO: Stop using the offscreen canvas even when in software rendering
-                    mOffscreenCanvas.setBitmap(mOffscreenBuffer);
-                }
-                onDrawKeyboard(mOffscreenCanvas);
-            }
-            canvas.drawBitmap(mOffscreenBuffer, 0.0f, 0.0f, null);
-            draw = false;
+        super.onDraw(canvas);
+        if (canvas.isHardwareAccelerated()) {
+            onDrawKeyboard(canvas);
+            return;
         }
+
+        final boolean bufferNeedsUpdates = mInvalidateAllKeys || !mInvalidatedKeys.isEmpty();
+        if (bufferNeedsUpdates || mOffscreenBuffer == null) {
+            if (maybeAllocateOffscreenBuffer()) {
+                mInvalidateAllKeys = true;
+                // TODO: Stop using the offscreen canvas even when in software rendering
+                mOffscreenCanvas.setBitmap(mOffscreenBuffer);
+            }
+            onDrawKeyboard(mOffscreenCanvas);
+        }
+        canvas.drawBitmap(mOffscreenBuffer, 0.0f, 0.0f, null);
     }
 
     private boolean maybeAllocateOffscreenBuffer() {

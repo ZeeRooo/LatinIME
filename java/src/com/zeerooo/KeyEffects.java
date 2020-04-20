@@ -1,6 +1,5 @@
 package com.zeerooo;
 
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Matrix;
@@ -12,30 +11,31 @@ import com.android.inputmethod.keyboard.Keyboard;
 public class KeyEffects {
     private int[] colorArray = {};
     private short animationSpeed;
+    private byte factor;
+    public static byte keyEffectMode;
     private Matrix matrix;
     private LinearGradient linearGradient;
-    public static byte keyEffectMode;
 
     public void initialize(Keyboard keyboard, Paint paint) {
-        if (keyEffectMode == 1 || keyEffectMode == 2) {
-            if (keyEffectMode == 1 && colorArray.length != 600)
+        if (keyEffectMode == 1 || keyEffectMode == 2 || keyEffectMode == 3) {
+            if ((keyEffectMode == 1 || keyEffectMode == 3) && colorArray.length != 600)
                 rainbow();
             else if (keyEffectMode == 2)
                 setColorArray(new int[]{Color.DKGRAY, Tinter.colorAccentDark});
 
+            factor = (byte) (keyboard.mOccupiedWidth / 125);
             linearGradient = new LinearGradient(0, 0, keyboard.mOccupiedWidth, 0, colorArray, null, Shader.TileMode.MIRROR);
             paint.setShader(linearGradient);
             matrix = new Matrix();
         }
     }
 
-    public Canvas draw(Canvas canvas) {
-        if (keyEffectMode == 1 || keyEffectMode == 2) {
-            animationSpeed += 2;
+    public void draw(boolean isPressed) {
+        if (((keyEffectMode == 1 || keyEffectMode == 2) && !isPressed) || keyEffectMode == 3 && isPressed) {
+            animationSpeed += factor;
             matrix.setTranslate(animationSpeed, 0);
             linearGradient.setLocalMatrix(matrix);
         }
-        return canvas;
     }
 
     public void setColorArray(int[] colorArray) {
