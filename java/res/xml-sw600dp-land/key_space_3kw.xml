@@ -29,35 +29,12 @@
              ne: Nepali
              te: Telugu -->
         <case
-            latin:languageCode="fa|kn|ne|te"
-            latin:languageSwitchKeyEnabled="true"
-        >
-            <Key
-                latin:keyStyle="languageSwitchKeyStyle" />
-            <Key
-                latin:keyStyle="spaceKeyStyle"
-                latin:keyWidth="7.0%p" />
-            <Key
-                latin:keyStyle="zwnjKeyStyle" />
-        </case>
-        <case
-            latin:languageCode="fa|kn|ne|te"
-            latin:languageSwitchKeyEnabled="false"
-        >
+            latin:languageCode="fa|kn|ne|te">
             <Key
                 latin:keyStyle="spaceKeyStyle"
                 latin:keyWidth="14.0%p" />
             <Key
                 latin:keyStyle="zwnjKeyStyle" />
-        </case>
-        <case
-            latin:languageSwitchKeyEnabled="true"
-        >
-            <Key
-                latin:keyStyle="languageSwitchKeyStyle" />
-            <Key
-                latin:keyStyle="spaceKeyStyle"
-                latin:keyWidth="14.0%p" />
         </case>
         <!-- languageSwitchKeyEnabled="false" -->
         <default>

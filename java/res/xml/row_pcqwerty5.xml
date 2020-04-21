@@ -33,26 +33,10 @@
                     latin:keyWidth="11.538%p" />
             </case>
         </switch>
-        <switch>
-            <case
-                latin:languageSwitchKeyEnabled="true"
-            >
-                <Key
-                    latin:keyStyle="languageSwitchKeyStyle"
-                    latin:keyXPos="19.231%p"
-                    latin:keyWidth="11.538%p" />
-                <Key
-                    latin:keyStyle="spaceKeyStyle"
-                    latin:keyWidth="42.308%p" />
-            </case>
-            <!-- languageSwitchKeyEnabled="false" -->
-            <default>
-                <Key
-                    latin:keyStyle="spaceKeyStyle"
-                    latin:keyXPos="26.923%p"
-                    latin:keyWidth="46.154%p" />
-            </default>
-        </switch>
+        <Key
+            latin:keyStyle="spaceKeyStyle"
+            latin:keyXPos="26.923%p"
+            latin:keyWidth="46.154%p" />
         <Key
             latin:keyStyle="enterKeyStyle"
             latin:keyXPos="-19.231%p"

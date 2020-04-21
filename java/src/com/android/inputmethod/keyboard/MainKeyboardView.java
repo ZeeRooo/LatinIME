@@ -474,7 +474,7 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
     // Implements {@link DrawingProxy#onKeyPressed(Key,boolean)}.
     @Override
     public void onKeyPressed(@NonNull final Key key, final boolean withPreview) {
-        keyEffects.draw(true);
+        keyEffects.draw((byte) 3);
         key.onPressed();
         invalidateKey(key);
         if (withPreview && !key.noKeyPreview()) {
@@ -485,7 +485,7 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        keyEffects.draw(false);
+        keyEffects.draw((byte) 1);
     }
 
     private void showKeyPreview(@NonNull final Key key) {

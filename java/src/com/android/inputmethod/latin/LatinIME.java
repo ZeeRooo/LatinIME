@@ -1218,7 +1218,6 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         if (mInputView == null) {
             return;
         }
-        final SettingsValues settingsValues = mSettings.getCurrent();
         final View visibleKeyboardView = mKeyboardSwitcher.getVisibleKeyboardView();
         if (visibleKeyboardView == null || !hasSuggestionStripView()) {
             return;
@@ -1242,9 +1241,8 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
             final int touchLeft = 0;
             final int touchTop = mKeyboardSwitcher.isShowingMoreKeysPanel() ? 0 : visibleTopY;
             final int touchRight = visibleKeyboardView.getWidth();
-            final int touchBottom = inputHeight;
             outInsets.touchableInsets = InputMethodService.Insets.TOUCHABLE_INSETS_REGION;
-            outInsets.touchableRegion.set(touchLeft, touchTop, touchRight, touchBottom);
+            outInsets.touchableRegion.set(touchLeft, touchTop, touchRight, inputHeight);
             mSuggestionStripView.setBackgroundColor(Tinter.colorAccent);
         }
         outInsets.contentTopInsets = visibleTopY;
@@ -1973,18 +1971,6 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         // strategy once the implementation of
         // {@link InputMethodManager#shouldOfferSwitchingToNextInputMethod} is defined well.
         final boolean fallbackValue = mSettings.getCurrent().mIncludesOtherImesInLanguageSwitchList;
-        final IBinder token = getWindow().getWindow().getAttributes().token;
-        if (token == null) {
-            return fallbackValue;
-        }
-        return mRichImm.shouldOfferSwitchingToNextInputMethod(token, fallbackValue);
-    }
-
-    public boolean shouldShowLanguageSwitchKey() {
-        // TODO: Revisit here to reorganize the settings. Probably we can/should use different
-        // strategy once the implementation of
-        // {@link InputMethodManager#shouldOfferSwitchingToNextInputMethod} is defined well.
-        final boolean fallbackValue = mSettings.getCurrent().isLanguageSwitchKeyEnabled();
         final IBinder token = getWindow().getWindow().getAttributes().token;
         if (token == null) {
             return fallbackValue;

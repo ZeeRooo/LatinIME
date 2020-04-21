@@ -69,7 +69,6 @@ public class SettingsValues {
     public final boolean mKeyPreviewPopupOn;
     public final boolean mShowsVoiceInputKey;
     public final boolean mIncludesOtherImesInLanguageSwitchList;
-    public final boolean mShowsLanguageSwitchKey;
     public final boolean mUseContactsDict;
     public final boolean mUsePersonalizedDicts;
     public final boolean mUseDoubleSpacePeriod;
@@ -144,8 +143,6 @@ public class SettingsValues {
         mIncludesOtherImesInLanguageSwitchList = Settings.ENABLE_SHOW_LANGUAGE_SWITCH_KEY_SETTINGS
                 ? prefs.getBoolean(Settings.PREF_INCLUDE_OTHER_IMES_IN_LANGUAGE_SWITCH_LIST, false)
                 : true /* forcibly */;
-        mShowsLanguageSwitchKey = Settings.ENABLE_SHOW_LANGUAGE_SWITCH_KEY_SETTINGS
-                ? Settings.readShowsLanguageSwitchKey(prefs) : true /* forcibly */;
         mUseContactsDict = prefs.getBoolean(Settings.PREF_KEY_USE_CONTACTS_DICT, true);
         mUsePersonalizedDicts = prefs.getBoolean(Settings.PREF_KEY_USE_PERSONALIZED_DICTS, true);
         mUseDoubleSpacePeriod = prefs.getBoolean(Settings.PREF_KEY_USE_DOUBLE_SPACE_PERIOD, true)
@@ -273,17 +270,6 @@ public class SettingsValues {
         return mInputAttributes.mShouldInsertSpacesAutomatically;
     }
 
-    public boolean isLanguageSwitchKeyEnabled() {
-        if (!mShowsLanguageSwitchKey) {
-            return false;
-        }
-        final RichInputMethodManager imm = RichInputMethodManager.getInstance();
-        if (mIncludesOtherImesInLanguageSwitchList) {
-            return imm.hasMultipleEnabledIMEsOrSubtypes(false /* include aux subtypes */);
-        }
-        return imm.hasMultipleEnabledSubtypesInThisIme(false /* include aux subtypes */);
-    }
-
     public boolean isSameInputType(final EditorInfo editorInfo) {
         return mInputAttributes.isSameInputType(editorInfo);
     }
@@ -391,8 +377,6 @@ public class SettingsValues {
         sb.append("" + mShowsVoiceInputKey);
         sb.append("\n   mIncludesOtherImesInLanguageSwitchList = ");
         sb.append("" + mIncludesOtherImesInLanguageSwitchList);
-        sb.append("\n   mShowsLanguageSwitchKey = ");
-        sb.append("" + mShowsLanguageSwitchKey);
         sb.append("\n   mUseContactsDict = ");
         sb.append("" + mUseContactsDict);
         sb.append("\n   mUsePersonalizedDicts = ");
