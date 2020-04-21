@@ -30,9 +30,9 @@ public class KeyEffects {
         }
     }
 
-    public void draw(boolean isPressed) {
-        if (((keyEffectMode == 1 || keyEffectMode == 2) && !isPressed) || keyEffectMode == 3 && isPressed) {
-            animationSpeed += factor;
+    public void draw(byte multiply) {
+        if (((keyEffectMode == 1 || keyEffectMode == 2) && multiply == 1) || keyEffectMode == 3 && multiply != 1) {
+            animationSpeed += factor * multiply;
             matrix.setTranslate(animationSpeed, 0);
             linearGradient.setLocalMatrix(matrix);
         }
